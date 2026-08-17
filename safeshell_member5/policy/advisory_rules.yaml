@@ -1,0 +1,10 @@
+# advisory_rules.yaml
+# Rule-based lookup table mapping risky normalized command patterns to safer alternatives.
+
+"rm -rf <path>": "mv <path> /tmp/trash/ (reversible) or rm -ri <path> (confirm each)"
+"git push --force": "git push --force-with-lease"
+"chmod -R 777 <path>": "chmod -R 755 <path> or narrower scope"
+"sudo rm -rf <path>": "Use 'trash-cli' or inspect target path with 'ls -la' before proceeding. Do NOT use rm -rf on root/system paths."
+"chmod 777 <path>": "Use restrictive permissions like 'chmod 755' for directories or 'chmod 644' for files."
+"dd if=<path> of=<path>": "Verify target disk with 'lsblk'. Use 'dd' with 'status=progress' and confirm device node carefully."
+"kill -9 <path>": "Target specific worker PIDs instead, or use graceful termination 'kill -15 <pid>'."
