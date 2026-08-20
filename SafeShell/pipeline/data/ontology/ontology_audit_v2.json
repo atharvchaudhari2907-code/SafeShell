@@ -1,0 +1,1029 @@
+{
+  "schema_version": "3.0",
+  "input": "/home/paras/Desktop/SafeShell/data/enriched/enriched_commands_v9.jsonl",
+  "ontology": {
+    "intents": [
+      "search",
+      "inspect",
+      "execute",
+      "extract",
+      "read",
+      "manage_permissions",
+      "manage_container",
+      "list",
+      "sort",
+      "shell_control",
+      "version_control",
+      "copy",
+      "connect",
+      "manage_package",
+      "transform",
+      "filter",
+      "move",
+      "delete",
+      "transfer",
+      "manage_network",
+      "manage_process",
+      "install",
+      "security_operation",
+      "manage_identity",
+      "uninstall",
+      "manage_service",
+      "manage_database",
+      "manage_cloud",
+      "modify",
+      "configure",
+      "create",
+      "archive",
+      "network_request",
+      "compare",
+      "output"
+    ],
+    "risk_levels": [
+      "safe",
+      "low",
+      "medium",
+      "high",
+      "critical"
+    ],
+    "intent_mode": "multi_label",
+    "unknown_training_policy": "exclude_from_supervised_training"
+  },
+  "dataset": {
+    "records": 15225,
+    "malformed": [],
+    "unique_programs": 300,
+    "unique_domains": 22,
+    "unique_operations": 148,
+    "unique_operation_details": 400
+  },
+  "validation": {
+    "records": 15225,
+    "duplicate_ids": [],
+    "invalid_intents": [],
+    "resolved_rows": 15219,
+    "unknown_rows": 6,
+    "unresolved_ids": [
+      880,
+      882,
+      884,
+      886,
+      888,
+      890
+    ],
+    "source_counts": {
+      "operation": 12957,
+      "command_override": 180,
+      "detail": 1875,
+      "package_query": 71,
+      "detail_prefix": 92,
+      "unknown": 6,
+      "package_fallback": 44
+    },
+    "intent_counts": {
+      "inspect": 3137,
+      "list": 411,
+      "shell_control": 443,
+      "create": 47,
+      "delete": 238,
+      "copy": 332,
+      "move": 256,
+      "search": 3789,
+      "manage_permissions": 641,
+      "configure": 24,
+      "read": 866,
+      "sort": 364,
+      "transform": 259,
+      "extract": 906,
+      "filter": 260,
+      "output": 478,
+      "version_control": 306,
+      "install": 129,
+      "execute": 922,
+      "manage_process": 112,
+      "manage_service": 98,
+      "manage_package": 77,
+      "uninstall": 82,
+      "modify": 73,
+      "manage_network": 183,
+      "network_request": 250,
+      "transfer": 251,
+      "connect": 75,
+      "archive": 45,
+      "manage_identity": 86,
+      "security_operation": 105,
+      "compare": 7,
+      "manage_database": 74,
+      "manage_container": 481,
+      "unknown": 6,
+      "manage_cloud": 68
+    },
+    "risk_counts": {
+      "safe": 11231,
+      "low": 2587,
+      "medium": 681,
+      "high": 722,
+      "critical": 4
+    },
+    "ambiguous_operations": {
+      "unknown": 6
+    }
+  },
+  "top_programs": [
+    [
+      "find",
+      2065
+    ],
+    [
+      "grep",
+      2006
+    ],
+    [
+      "git",
+      957
+    ],
+    [
+      "kubectl",
+      610
+    ],
+    [
+      "cut",
+      609
+    ],
+    [
+      "docker",
+      554
+    ],
+    [
+      "head",
+      416
+    ],
+    [
+      "ls",
+      409
+    ],
+    [
+      "chmod",
+      379
+    ],
+    [
+      "cat",
+      379
+    ],
+    [
+      "sort",
+      364
+    ],
+    [
+      "curl",
+      362
+    ],
+    [
+      "cp",
+      332
+    ],
+    [
+      "echo",
+      318
+    ],
+    [
+      "awk",
+      294
+    ],
+    [
+      "sed",
+      291
+    ],
+    [
+      null,
+      281
+    ],
+    [
+      "mv",
+      256
+    ],
+    [
+      "chown",
+      256
+    ],
+    [
+      "journalctl",
+      221
+    ],
+    [
+      "systemctl",
+      207
+    ],
+    [
+      "apt",
+      202
+    ],
+    [
+      "ps",
+      190
+    ],
+    [
+      "printf",
+      160
+    ],
+    [
+      "rm",
+      147
+    ],
+    [
+      "df",
+      146
+    ],
+    [
+      "ip",
+      127
+    ],
+    [
+      "du",
+      124
+    ],
+    [
+      "export",
+      98
+    ],
+    [
+      "rsync",
+      87
+    ]
+  ],
+  "top_domains": [
+    [
+      "filesystem",
+      4221
+    ],
+    [
+      "text_processing",
+      3620
+    ],
+    [
+      "shell",
+      1038
+    ],
+    [
+      "version_control",
+      957
+    ],
+    [
+      "network",
+      863
+    ],
+    [
+      "permissions",
+      694
+    ],
+    [
+      "kubernetes",
+      610
+    ],
+    [
+      "container",
+      554
+    ],
+    [
+      "package",
+      497
+    ],
+    [
+      "process",
+      399
+    ],
+    [
+      "disk_storage",
+      316
+    ],
+    [
+      "development",
+      276
+    ],
+    [
+      "system_logging",
+      233
+    ],
+    [
+      "service",
+      215
+    ],
+    [
+      "system",
+      183
+    ],
+    [
+      "security",
+      164
+    ],
+    [
+      "user_account",
+      142
+    ],
+    [
+      "database",
+      74
+    ],
+    [
+      "cloud",
+      68
+    ],
+    [
+      "archive_compression",
+      48
+    ],
+    [
+      "automation",
+      47
+    ],
+    [
+      "other",
+      6
+    ]
+  ],
+  "top_operations": [
+    [
+      "search_text",
+      1746
+    ],
+    [
+      "inspect",
+      1595
+    ],
+    [
+      "search",
+      1393
+    ],
+    [
+      "extract_fields",
+      903
+    ],
+    [
+      "read",
+      862
+    ],
+    [
+      "search_and_execute",
+      602
+    ],
+    [
+      "modify_or_execute",
+      426
+    ],
+    [
+      "list",
+      411
+    ],
+    [
+      "change_permissions",
+      384
+    ],
+    [
+      "network_request",
+      367
+    ],
+    [
+      "sort",
+      364
+    ],
+    [
+      "copy",
+      332
+    ],
+    [
+      "package_management",
+      323
+    ],
+    [
+      "output",
+      318
+    ],
+    [
+      "set_variable",
+      272
+    ],
+    [
+      "inspect_usage",
+      270
+    ],
+    [
+      "filter_text",
+      260
+    ],
+    [
+      "move",
+      256
+    ],
+    [
+      "change_owner",
+      256
+    ],
+    [
+      "transform_text",
+      245
+    ],
+    [
+      "inspect_logs",
+      233
+    ],
+    [
+      "delete",
+      220
+    ],
+    [
+      "inspect_processes",
+      207
+    ],
+    [
+      "formatted_output",
+      160
+    ],
+    [
+      "network_configuration",
+      143
+    ],
+    [
+      "container_operation",
+      139
+    ],
+    [
+      "execute_program",
+      115
+    ],
+    [
+      "delete_or_modify",
+      115
+    ],
+    [
+      "terminate_process",
+      103
+    ],
+    [
+      "file_transfer",
+      102
+    ],
+    [
+      "inspect_system",
+      100
+    ],
+    [
+      "set_environment",
+      98
+    ],
+    [
+      "manage_service",
+      98
+    ],
+    [
+      "compile",
+      94
+    ],
+    [
+      "version_control",
+      86
+    ],
+    [
+      "inspect_package",
+      82
+    ],
+    [
+      "inspect_resources",
+      80
+    ],
+    [
+      "dns_lookup",
+      78
+    ],
+    [
+      "cloud_operation",
+      68
+    ],
+    [
+      "inspect_location",
+      66
+    ],
+    [
+      "database_operation",
+      62
+    ],
+    [
+      "cryptographic_operation",
+      62
+    ],
+    [
+      "kubernetes_operation",
+      58
+    ],
+    [
+      "network_connection",
+      57
+    ],
+    [
+      "manage_group",
+      55
+    ],
+    [
+      "search_processes",
+      48
+    ],
+    [
+      "modify_text",
+      48
+    ],
+    [
+      "configuration_automation",
+      39
+    ],
+    [
+      "connectivity_test",
+      37
+    ],
+    [
+      "build",
+      35
+    ],
+    [
+      "inspect_environment",
+      31
+    ],
+    [
+      "inspect_command",
+      30
+    ],
+    [
+      "manage_user",
+      30
+    ],
+    [
+      "firewall_management",
+      30
+    ],
+    [
+      "generate_sequence",
+      30
+    ],
+    [
+      "checksum",
+      29
+    ],
+    [
+      "archive",
+      27
+    ],
+    [
+      "inspect_identity",
+      27
+    ],
+    [
+      "inspect_capabilities",
+      26
+    ],
+    [
+      "identity_lookup",
+      24
+    ],
+    [
+      "inspect_interface",
+      23
+    ],
+    [
+      "inspect_permissions",
+      23
+    ],
+    [
+      "manage_package_state",
+      19
+    ],
+    [
+      "remote_access",
+      18
+    ],
+    [
+      "inspect_connections",
+      18
+    ],
+    [
+      "create",
+      17
+    ],
+    [
+      "compress",
+      17
+    ],
+    [
+      "change_directory",
+      14
+    ],
+    [
+      "key_management",
+      14
+    ],
+    [
+      "inspect_devices",
+      13
+    ],
+    [
+      "inspect_login_history",
+      13
+    ],
+    [
+      "inspect_groups",
+      12
+    ],
+    [
+      "shell_configuration",
+      12
+    ],
+    [
+      "infrastructure_operation",
+      12
+    ],
+    [
+      "execute_package_binary",
+      11
+    ],
+    [
+      "database_backup",
+      11
+    ],
+    [
+      "route_diagnostic",
+      10
+    ],
+    [
+      "control_structure",
+      9
+    ],
+    [
+      "conditional_test",
+      8
+    ],
+    [
+      "mount",
+      7
+    ],
+    [
+      "compare",
+      7
+    ],
+    [
+      "inspect_storage",
+      7
+    ],
+    [
+      "count",
+      6
+    ],
+    [
+      "privilege_wrapper",
+      6
+    ],
+    [
+      "unknown",
+      6
+    ],
+    [
+      "security_configuration",
+      6
+    ],
+    [
+      "packet_capture",
+      6
+    ],
+    [
+      "wait",
+      5
+    ],
+    [
+      "source_script",
+      5
+    ],
+    [
+      "inspect_sessions",
+      5
+    ],
+    [
+      "transform_json",
+      5
+    ],
+    [
+      "partition",
+      5
+    ],
+    [
+      "resume_job",
+      4
+    ],
+    [
+      "inspect_mounts",
+      4
+    ],
+    [
+      "read_input",
+      4
+    ],
+    [
+      "return_status",
+      4
+    ],
+    [
+      "replace_process",
+      4
+    ],
+    [
+      "schedule_task",
+      4
+    ],
+    [
+      "audit_management",
+      4
+    ],
+    [
+      "audit_search",
+      4
+    ]
+  ],
+  "mixed_operation_audit": {
+    "search_and_execute": {
+      "total": 602,
+      "mappings": [
+        {
+          "candidate_intent": "search+execute",
+          "resolution": "detail",
+          "count": 602
+        }
+      ],
+      "examples": [
+        "find . -type f -exec chmod 644 {} \\;",
+        "find . -type f -exec grep -l \"password\" {} \\;",
+        "find src -type f -name \"*.py\" -exec grep -n \"class \" {} +"
+      ]
+    },
+    "modify_or_execute": {
+      "total": 426,
+      "mappings": [
+        {
+          "candidate_intent": "manage_container",
+          "resolution": "detail",
+          "count": 182
+        },
+        {
+          "candidate_intent": "version_control",
+          "resolution": "command_override",
+          "count": 106
+        },
+        {
+          "candidate_intent": "manage_container",
+          "resolution": "detail_prefix",
+          "count": 72
+        },
+        {
+          "candidate_intent": "version_control",
+          "resolution": "detail_prefix",
+          "count": 20
+        },
+        {
+          "candidate_intent": "install",
+          "resolution": "detail",
+          "count": 19
+        },
+        {
+          "candidate_intent": "execute",
+          "resolution": "detail",
+          "count": 11
+        },
+        {
+          "candidate_intent": "manage_package",
+          "resolution": "detail",
+          "count": 9
+        },
+        {
+          "candidate_intent": "inspect",
+          "resolution": "command_override",
+          "count": 7
+        }
+      ],
+      "examples": [
+        "npm install && npm test",
+        "git add file.txt",
+        "git add ."
+      ]
+    },
+    "delete_or_modify": {
+      "total": 115,
+      "mappings": [
+        {
+          "candidate_intent": "version_control",
+          "resolution": "detail",
+          "count": 58
+        },
+        {
+          "candidate_intent": "manage_container",
+          "resolution": "detail",
+          "count": 30
+        },
+        {
+          "candidate_intent": "version_control+modify",
+          "resolution": "command_override",
+          "count": 22
+        },
+        {
+          "candidate_intent": "version_control+delete",
+          "resolution": "command_override",
+          "count": 4
+        },
+        {
+          "candidate_intent": "version_control+inspect",
+          "resolution": "command_override",
+          "count": 1
+        }
+      ],
+      "examples": [
+        "git reset file.txt",
+        "git reset HEAD file.txt",
+        "git reset --soft HEAD~1"
+      ]
+    },
+    "network_request": {
+      "total": 367,
+      "mappings": [
+        {
+          "candidate_intent": "network_request",
+          "resolution": "detail",
+          "count": 250
+        },
+        {
+          "candidate_intent": "transfer",
+          "resolution": "detail",
+          "count": 117
+        }
+      ],
+      "examples": [
+        "curl https://example.com",
+        "curl -I https://example.com",
+        "curl -L https://example.com"
+      ]
+    },
+    "package_management": {
+      "total": 323,
+      "mappings": [
+        {
+          "candidate_intent": "install",
+          "resolution": "detail",
+          "count": 101
+        },
+        {
+          "candidate_intent": "uninstall",
+          "resolution": "detail",
+          "count": 81
+        },
+        {
+          "candidate_intent": "inspect",
+          "resolution": "package_query",
+          "count": 71
+        },
+        {
+          "candidate_intent": "manage_package",
+          "resolution": "package_fallback",
+          "count": 44
+        },
+        {
+          "candidate_intent": "transfer",
+          "resolution": "detail",
+          "count": 21
+        },
+        {
+          "candidate_intent": "manage_package",
+          "resolution": "detail",
+          "count": 5
+        }
+      ],
+      "examples": [
+        "apt update",
+        "apt install nginx",
+        "apt install python3"
+      ]
+    },
+    "inspect_system": {
+      "total": 100,
+      "mappings": [
+        {
+          "candidate_intent": "inspect",
+          "resolution": "detail",
+          "count": 100
+        }
+      ],
+      "examples": [
+        "hostname",
+        "hostname -I",
+        "uname"
+      ]
+    },
+    "manage_service": {
+      "total": 98,
+      "mappings": [
+        {
+          "candidate_intent": "manage_service",
+          "resolution": "detail",
+          "count": 98
+        }
+      ],
+      "examples": [
+        "systemctl start nginx",
+        "systemctl stop nginx",
+        "systemctl restart nginx"
+      ]
+    },
+    "inspect_command": {
+      "total": 30,
+      "mappings": [
+        {
+          "candidate_intent": "inspect",
+          "resolution": "detail",
+          "count": 30
+        }
+      ],
+      "examples": [
+        "command > output.txt 2> error.txt",
+        "command > output.txt 2>&1",
+        "command >> output.txt 2>&1"
+      ]
+    },
+    "checksum": {
+      "total": 29,
+      "mappings": [
+        {
+          "candidate_intent": "inspect",
+          "resolution": "detail",
+          "count": 29
+        }
+      ],
+      "examples": [
+        "md5sum file.txt",
+        "sha256sum file.txt",
+        "sha512sum file.txt"
+      ]
+    },
+    "remote_access": {
+      "total": 18,
+      "mappings": [
+        {
+          "candidate_intent": "connect",
+          "resolution": "detail",
+          "count": 17
+        },
+        {
+          "candidate_intent": "connect+transfer",
+          "resolution": "detail",
+          "count": 1
+        }
+      ],
+      "examples": [
+        "ssh user@example.com",
+        "sftp user@example.com",
+        "ssh user@server"
+      ]
+    },
+    "infrastructure_operation": {
+      "total": 12,
+      "mappings": [
+        {
+          "candidate_intent": "inspect",
+          "resolution": "detail",
+          "count": 5
+        },
+        {
+          "candidate_intent": "configure",
+          "resolution": "detail",
+          "count": 3
+        },
+        {
+          "candidate_intent": "execute",
+          "resolution": "detail",
+          "count": 3
+        },
+        {
+          "candidate_intent": "delete",
+          "resolution": "detail",
+          "count": 1
+        }
+      ],
+      "examples": [
+        "terraform init",
+        "terraform validate",
+        "terraform fmt"
+      ]
+    }
+  },
+  "risk_audit": {
+    "distribution": {
+      "safe": 11231,
+      "low": 2587,
+      "medium": 681,
+      "high": 722,
+      "critical": 4
+    },
+    "note": "Risk scoring is an audit heuristic only; freeze final risk labeling separately in label.py."
+  },
+  "status": "REVIEW"
+}

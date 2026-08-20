@@ -1,0 +1,4192 @@
+{
+  "total_records": 15225,
+  "unknown_operations": 841,
+  "programs": [
+    {
+      "program": "None",
+      "count": 230,
+      "commands": [
+        {
+          "command": "command > output.txt 2> error.txt",
+          "count": 1
+        },
+        {
+          "command": "command > output.txt 2>&1",
+          "count": 1
+        },
+        {
+          "command": "command >> output.txt 2>&1",
+          "count": 1
+        },
+        {
+          "command": "files=$(ls)",
+          "count": 1
+        },
+        {
+          "command": "count=$(find . -type f | wc -l)",
+          "count": 1
+        },
+        {
+          "command": "NAME=\"SafeShell\"",
+          "count": 1
+        },
+        {
+          "command": "PATH=\"/usr/local/bin:$PATH\"",
+          "count": 1
+        },
+        {
+          "command": "HOME=/tmp command",
+          "count": 1
+        },
+        {
+          "command": "sudo -l",
+          "count": 1
+        },
+        {
+          "command": "(cd project && ls)",
+          "count": 1
+        },
+        {
+          "command": "(echo hello)",
+          "count": 1
+        },
+        {
+          "command": "(pwd; ls)",
+          "count": 1
+        },
+        {
+          "command": "(cd /tmp; touch test.txt)",
+          "count": 1
+        },
+        {
+          "command": "( echo \"inside subshell\" )",
+          "count": 1
+        },
+        {
+          "command": "for file in *.txt; do echo \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "for file in *.log; do cat \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "for dir in */; do echo \"$dir\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in 1 2 3; do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "while read line; do echo \"$line\"; done < input.txt",
+          "count": 1
+        },
+        {
+          "command": "FILES=$(find . -type f -name \"*.py\")",
+          "count": 1
+        },
+        {
+          "command": "COUNT=$(ps aux | grep python | wc -l)",
+          "count": 1
+        },
+        {
+          "command": "( cd /tmp && ls )",
+          "count": 1
+        },
+        {
+          "command": "{ echo hello; echo world; }",
+          "count": 1
+        },
+        {
+          "command": "env",
+          "count": 1
+        },
+        {
+          "command": "sudo -v",
+          "count": 1
+        },
+        {
+          "command": "sudo -E env",
+          "count": 1
+        },
+        {
+          "command": "if [ -f config.json ]; then cat config.json; fi",
+          "count": 1
+        },
+        {
+          "command": "if [ -d project ]; then cd project && ls; fi",
+          "count": 1
+        },
+        {
+          "command": "if command -v git >/dev/null 2>&1; then git status; fi",
+          "count": 1
+        },
+        {
+          "command": "for file in *.log; do grep \"ERROR\" \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "for file in $(find . -name \"*.txt\"); do echo \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "while read -r line; do echo \"$line\"; done < input.txt",
+          "count": 1
+        },
+        {
+          "command": "{ echo \"start\"; sleep 1; echo \"done\"; } > output.txt",
+          "count": 1
+        },
+        {
+          "command": "{ echo \"start\"; echo \"finish\"; }",
+          "count": 1
+        },
+        {
+          "command": "{ pwd; ls; } > directory.txt",
+          "count": 1
+        },
+        {
+          "command": "{ echo \"error\"; } 2> error.log",
+          "count": 1
+        },
+        {
+          "command": "( echo \"subshell\"; pwd )",
+          "count": 1
+        },
+        {
+          "command": "( cd /tmp; pwd )",
+          "count": 1
+        },
+        {
+          "command": "( cd /tmp && ls ) > tmp_listing.txt",
+          "count": 1
+        },
+        {
+          "command": "{ cd project && git status; } 2>&1",
+          "count": 1
+        },
+        {
+          "command": "command 3>output.txt",
+          "count": 1
+        },
+        {
+          "command": "command 3>>output.txt",
+          "count": 1
+        },
+        {
+          "command": "command 3>&1",
+          "count": 1
+        },
+        {
+          "command": "command 3>&-",
+          "count": 1
+        },
+        {
+          "command": "exec 3>log.txt",
+          "count": 1
+        },
+        {
+          "command": "exec 3>&-",
+          "count": 1
+        },
+        {
+          "command": "RESULT=\"$(git rev-parse --abbrev-ref HEAD)\"",
+          "count": 1
+        },
+        {
+          "command": "COUNT=\"$(find \"$(pwd)\" -type f | wc -l)\"",
+          "count": 1
+        },
+        {
+          "command": "for item in \"${ARRAY[@]}\"; do echo \"$item\"; done",
+          "count": 1
+        },
+        {
+          "command": "for file in \"${FILES[@]}\"; do cat \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "if [ -f config.json ]; then cat config.json; elif [ -f config.yaml ]; then cat config.yaml; else echo \"missing\"; fi",
+          "count": 1
+        },
+        {
+          "command": "if command -v docker >/dev/null; then docker --version; else echo \"Docker missing\"; fi",
+          "count": 1
+        },
+        {
+          "command": "for file in *.log; do echo \"Processing $file\"; grep -i error \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "for file in *.txt; do cp \"$file\" \"backup/$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "for dir in */; do echo \"$dir\"; du -sh \"$dir\"; done",
+          "count": 1
+        },
+        {
+          "command": "for user in alice bob charlie; do id \"$user\"; done",
+          "count": 1
+        },
+        {
+          "command": "for port in 8000 8080 3000; do ss -ltn | grep \":$port\"; done",
+          "count": 1
+        },
+        {
+          "command": "for branch in $(git branch --format='%(refname:short)'); do echo \"$branch\"; done",
+          "count": 1
+        },
+        {
+          "command": "while read -r line; do echo \"$line\"; done < names.txt",
+          "count": 1
+        },
+        {
+          "command": "while read -r user group; do echo \"$user belongs to $group\"; done < users.txt",
+          "count": 1
+        },
+        {
+          "command": "while IFS= read -r file; do wc -l \"$file\"; done < filelist.txt",
+          "count": 1
+        },
+        {
+          "command": "until ping -c 1 server.example.com >/dev/null 2>&1; do sleep 5; done",
+          "count": 1
+        },
+        {
+          "command": "for file in *.log; do grep -q ERROR \"$file\" || continue; echo \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "command 2>errors.log",
+          "count": 1
+        },
+        {
+          "command": "command 2>>errors.log",
+          "count": 1
+        },
+        {
+          "command": "command >output.log 2>errors.log",
+          "count": 1
+        },
+        {
+          "command": "command >output.log 2>&1",
+          "count": 1
+        },
+        {
+          "command": "command &>combined.log",
+          "count": 1
+        },
+        {
+          "command": "command &>>combined.log",
+          "count": 1
+        },
+        {
+          "command": "{ command1; command2; } >combined.log 2>&1",
+          "count": 1
+        },
+        {
+          "command": "if git diff --quiet; then echo \"Clean\"; else echo \"Modified\"; fi",
+          "count": 1
+        },
+        {
+          "command": "for file in $(find . -maxdepth 2 -type f -name \"*.conf\"); do echo \"Checking $file\"; grep -n \"port\" \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "if command -v systemctl >/dev/null 2>&1; then systemctl --failed; else service --status-all; fi",
+          "count": 1
+        },
+        {
+          "command": "for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do echo \"$branch: $(git rev-list --count \"$branch\") commits\"; done",
+          "count": 1
+        },
+        {
+          "command": "exec",
+          "count": 1
+        },
+        {
+          "command": "sudo -i",
+          "count": 1
+        },
+        {
+          "command": "sudo -s",
+          "count": 1
+        },
+        {
+          "command": "if (( COUNT > 10 )); then echo large; fi",
+          "count": 1
+        },
+        {
+          "command": "until command -v docker >/dev/null; do sleep 1; done",
+          "count": 1
+        },
+        {
+          "command": "(date)",
+          "count": 1
+        },
+        {
+          "command": "(df -h)",
+          "count": 1
+        },
+        {
+          "command": "(docker ps)",
+          "count": 1
+        },
+        {
+          "command": "(git status)",
+          "count": 1
+        },
+        {
+          "command": "(ls)",
+          "count": 1
+        },
+        {
+          "command": "(node --version)",
+          "count": 1
+        },
+        {
+          "command": "(ps aux)",
+          "count": 1
+        },
+        {
+          "command": "(pwd)",
+          "count": 1
+        },
+        {
+          "command": "(python3 --version)",
+          "count": 1
+        },
+        {
+          "command": "(whoami)",
+          "count": 1
+        },
+        {
+          "command": "APP_ENV=development command",
+          "count": 1
+        },
+        {
+          "command": "APP_ENV=production command",
+          "count": 1
+        },
+        {
+          "command": "DEBUG=0 command",
+          "count": 1
+        },
+        {
+          "command": "DEBUG=1 command",
+          "count": 1
+        },
+        {
+          "command": "NODE_ENV=development command",
+          "count": 1
+        },
+        {
+          "command": "NODE_ENV=production command",
+          "count": 1
+        },
+        {
+          "command": "PORT=3000 command",
+          "count": 1
+        },
+        {
+          "command": "PORT=8000 command",
+          "count": 1
+        },
+        {
+          "command": "for file in *.log; do grep ERROR \"$file\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 1); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 10); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 2); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 3); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 5); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 11); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 12); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 13); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 14); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 15); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 16); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 17); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 18); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 19); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 20); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 21); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 22); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 23); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 24); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 25); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 26); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 27); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 28); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 29); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 30); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 4); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 6); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 7); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 8); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 9); do echo $i; done",
+          "count": 1
+        },
+        {
+          "command": "if date; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "if docker ps; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "if git status; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "if hostname; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "if id; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "if pwd; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "if uname -r; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "if whoami; then echo ok; else echo failed; fi",
+          "count": 1
+        },
+        {
+          "command": "( date )",
+          "count": 1
+        },
+        {
+          "command": "( df -h )",
+          "count": 1
+        },
+        {
+          "command": "( free -h )",
+          "count": 1
+        },
+        {
+          "command": "( git status )",
+          "count": 1
+        },
+        {
+          "command": "( hostname )",
+          "count": 1
+        },
+        {
+          "command": "( ls -la )",
+          "count": 1
+        },
+        {
+          "command": "( pwd )",
+          "count": 1
+        },
+        {
+          "command": "( whoami )",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 10); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 11); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 12); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 13); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 14); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 15); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 16); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 17); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 18); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 19); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 2); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 20); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 21); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 22); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 23); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 24); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 25); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 26); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 27); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 28); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 29); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 3); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 30); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 31); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 32); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 33); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 34); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 35); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 36); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 37); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 38); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 39); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 4); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 40); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 5); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 6); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 7); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 8); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in $(seq 1 9); do echo \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..10}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..11}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..12}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..13}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..14}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..15}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..16}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..17}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..18}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..19}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..20}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..21}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..22}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..23}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..24}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..25}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..26}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..27}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..28}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..29}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..2}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..30}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..31}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..32}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..33}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..34}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..35}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..36}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..37}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..38}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..39}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..3}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..40}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..4}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..5}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..6}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..7}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..8}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "for i in {1..9}; do printf '%s\\n' \"$i\"; done",
+          "count": 1
+        },
+        {
+          "command": "if test -L symlink; then echo yes; else echo no; fi",
+          "count": 1
+        },
+        {
+          "command": "if test -d project; then echo yes; else echo no; fi",
+          "count": 1
+        },
+        {
+          "command": "if test -e config.json; then echo yes; else echo no; fi",
+          "count": 1
+        },
+        {
+          "command": "if test -f file.txt; then echo yes; else echo no; fi",
+          "count": 1
+        },
+        {
+          "command": "if test -r config.yaml; then echo yes; else echo no; fi",
+          "count": 1
+        },
+        {
+          "command": "if test -s data.txt; then echo yes; else echo no; fi",
+          "count": 1
+        },
+        {
+          "command": "if test -w output.txt; then echo yes; else echo no; fi",
+          "count": 1
+        },
+        {
+          "command": "if test -x script.sh; then echo yes; else echo no; fi",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "python3",
+      "count": 76,
+      "commands": [
+        {
+          "command": "python3 --version",
+          "count": 1
+        },
+        {
+          "command": "python3 script.py",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip --version",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install requests",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install numpy pandas",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip uninstall requests",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip freeze",
+          "count": 1
+        },
+        {
+          "command": "python3 -m venv .venv",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pytest",
+          "count": 1
+        },
+        {
+          "command": "python3 -m http.server 8000",
+          "count": 1
+        },
+        {
+          "command": "command -v python3",
+          "count": 1
+        },
+        {
+          "command": "python3 -m venv .venv && source .venv/bin/activate",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install -r requirements.txt",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install -e .",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install -e \".[dev]\"",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list --outdated",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show bashlex",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip freeze > requirements.txt",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip check",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pytest tests/",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pytest tests/test_parser.py",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pytest -q",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pytest -x",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pytest -k parser",
+          "count": 1
+        },
+        {
+          "command": "python3 -m unittest discover",
+          "count": 1
+        },
+        {
+          "command": "python3 -m compileall src/",
+          "count": 1
+        },
+        {
+          "command": "python3 -m py_compile scripts/collect.py",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pdb scripts/collect.py",
+          "count": 1
+        },
+        {
+          "command": "python3 -c \"import sys; print(sys.version)\"",
+          "count": 1
+        },
+        {
+          "command": "python3 -c \"import bashlex; print(bashlex)\"",
+          "count": 1
+        },
+        {
+          "command": "python3 -c \"import pathlib; print(pathlib.Path.cwd())\"",
+          "count": 1
+        },
+        {
+          "command": "python3 -c \"import sys; print(sys.executable)\"",
+          "count": 1
+        },
+        {
+          "command": "python3 -c \"import site; print(site.getsitepackages())\"",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install -r requirements.txt && pytest",
+          "count": 1
+        },
+        {
+          "command": "python3 -m compileall src/ && python3 -m pytest",
+          "count": 1
+        },
+        {
+          "command": "APP_ENV=test python3 -m pytest",
+          "count": 1
+        },
+        {
+          "command": "DEBUG=1 python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "PORT=8080 python3 server.py",
+          "count": 1
+        },
+        {
+          "command": "PYTHONPATH=src python3 -m pytest",
+          "count": 1
+        },
+        {
+          "command": "PATH=\"$HOME/.local/bin:$PATH\" python3 --version",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip cache purge",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install -r requirements.txt && python3 -m pytest && git status",
+          "count": 1
+        },
+        {
+          "command": "python3 -m compileall src/ && python3 -m pytest -q && echo \"Tests passed\"",
+          "count": 1
+        },
+        {
+          "command": "python3 -m http.server 8000 --directory public",
+          "count": 1
+        },
+        {
+          "command": "APP_ENV=development python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "APP_ENV=production python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "DEBUG=0 python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "NODE_ENV=development python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "NODE_ENV=production python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "PORT=3000 python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "PORT=8000 python3 app.py",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install --dry-run django",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install --dry-run fastapi",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install --dry-run flask",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install --dry-run numpy",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install --dry-run pandas",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install --dry-run requests",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip install --dry-run scikit-learn",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list | grep django",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list | grep fastapi",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list | grep flask",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list | grep numpy",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list | grep pandas",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list | grep requests",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip list | grep scikit-learn",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show django",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show fastapi",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show flask",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show numpy",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show pandas",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show requests",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pip show scikit-learn",
+          "count": 1
+        },
+        {
+          "command": "python3 -m pytest -v",
+          "count": 1
+        },
+        {
+          "command": "python3 -m unittest",
+          "count": 1
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "aws",
+      "count": 31,
+      "commands": [
+        {
+          "command": "aws sts get-caller-identity",
+          "count": 1
+        },
+        {
+          "command": "aws configure list",
+          "count": 1
+        },
+        {
+          "command": "aws s3 ls s3://example-bucket",
+          "count": 1
+        },
+        {
+          "command": "aws s3 cp file.txt s3://example-bucket/",
+          "count": 1
+        },
+        {
+          "command": "aws s3 sync ./dist s3://example-bucket/dist/",
+          "count": 1
+        },
+        {
+          "command": "aws ec2 describe-instances",
+          "count": 1
+        },
+        {
+          "command": "aws ec2 describe-security-groups",
+          "count": 1
+        },
+        {
+          "command": "aws ec2 describe-volumes",
+          "count": 1
+        },
+        {
+          "command": "aws ec2 start-instances --instance-ids i-example",
+          "count": 1
+        },
+        {
+          "command": "aws ec2 stop-instances --instance-ids i-example",
+          "count": 1
+        },
+        {
+          "command": "aws ec2 reboot-instances --instance-ids i-example",
+          "count": 1
+        },
+        {
+          "command": "aws ec2 terminate-instances --instance-ids i-example",
+          "count": 1
+        },
+        {
+          "command": "aws iam list-users",
+          "count": 1
+        },
+        {
+          "command": "aws iam list-roles",
+          "count": 1
+        },
+        {
+          "command": "aws logs tail /aws/example/app",
+          "count": 1
+        },
+        {
+          "command": "aws s3 cp file.txt s3://backup-bucket/",
+          "count": 1
+        },
+        {
+          "command": "aws s3 cp file.txt s3://logs-bucket/",
+          "count": 1
+        },
+        {
+          "command": "aws s3 cp s3://backup-bucket/file.txt .",
+          "count": 1
+        },
+        {
+          "command": "aws s3 cp s3://example-bucket/file.txt .",
+          "count": 1
+        },
+        {
+          "command": "aws s3 cp s3://logs-bucket/file.txt .",
+          "count": 1
+        },
+        {
+          "command": "aws s3 ls s3://backup-bucket",
+          "count": 1
+        },
+        {
+          "command": "aws s3 ls s3://backup-bucket --recursive",
+          "count": 1
+        },
+        {
+          "command": "aws s3 ls s3://example-bucket --recursive",
+          "count": 1
+        },
+        {
+          "command": "aws s3 ls s3://logs-bucket",
+          "count": 1
+        },
+        {
+          "command": "aws s3 ls s3://logs-bucket --recursive",
+          "count": 1
+        },
+        {
+          "command": "aws s3 sync ./data s3://backup-bucket/data",
+          "count": 1
+        },
+        {
+          "command": "aws s3 sync ./data s3://example-bucket/data",
+          "count": 1
+        },
+        {
+          "command": "aws s3 sync ./data s3://logs-bucket/data",
+          "count": 1
+        },
+        {
+          "command": "aws s3 sync s3://backup-bucket/data ./data",
+          "count": 1
+        },
+        {
+          "command": "aws s3 sync s3://example-bucket/data ./data",
+          "count": 1
+        },
+        {
+          "command": "aws s3 sync s3://logs-bucket/data ./data",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "seq",
+      "count": 30,
+      "commands": [
+        {
+          "command": "seq 1 1 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 10 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 11 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 12 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 13 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 14 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 15 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 16 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 17 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 18 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 19 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 2 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 20 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 21 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 22 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 23 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 24 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 25 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 26 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 27 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 28 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 29 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 3 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 30 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 4 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 5 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 6 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 7 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 8 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        },
+        {
+          "command": "seq 1 9 | while read n; do echo \"item:$n\"; done",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "getcap",
+      "count": 26,
+      "commands": [
+        {
+          "command": "getcap ./program",
+          "count": 1
+        },
+        {
+          "command": "getcap ./app",
+          "count": 1
+        },
+        {
+          "command": "getcap ./script.sh",
+          "count": 1
+        },
+        {
+          "command": "getcap ./server",
+          "count": 1
+        },
+        {
+          "command": "getcap /etc/hosts",
+          "count": 1
+        },
+        {
+          "command": "getcap /etc/passwd",
+          "count": 1
+        },
+        {
+          "command": "getcap /var/log/app.log",
+          "count": 1
+        },
+        {
+          "command": "getcap config.yaml",
+          "count": 1
+        },
+        {
+          "command": "getcap credentials.json",
+          "count": 1
+        },
+        {
+          "command": "getcap file.txt",
+          "count": 1
+        },
+        {
+          "command": "getcap private.key",
+          "count": 1
+        },
+        {
+          "command": "getcap script.sh",
+          "count": 1
+        },
+        {
+          "command": "getcap secret.env",
+          "count": 1
+        },
+        {
+          "command": "getcap README.md",
+          "count": 1
+        },
+        {
+          "command": "getcap access.log",
+          "count": 1
+        },
+        {
+          "command": "getcap app.log",
+          "count": 1
+        },
+        {
+          "command": "getcap build",
+          "count": 1
+        },
+        {
+          "command": "getcap config.json",
+          "count": 1
+        },
+        {
+          "command": "getcap data.txt",
+          "count": 1
+        },
+        {
+          "command": "getcap dist",
+          "count": 1
+        },
+        {
+          "command": "getcap error.log",
+          "count": 1
+        },
+        {
+          "command": "getcap notes.txt",
+          "count": 1
+        },
+        {
+          "command": "getcap src/app.js",
+          "count": 1
+        },
+        {
+          "command": "getcap src/main.cpp",
+          "count": 1
+        },
+        {
+          "command": "getcap src/main.py",
+          "count": 1
+        },
+        {
+          "command": "getcap tests/test_app.py",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "node",
+      "count": 23,
+      "commands": [
+        {
+          "command": "node --version",
+          "count": 1
+        },
+        {
+          "command": "node -e \"console.log(process.version)\"",
+          "count": 1
+        },
+        {
+          "command": "node --version && echo success",
+          "count": 1
+        },
+        {
+          "command": "node --version && echo success || echo failed",
+          "count": 1
+        },
+        {
+          "command": "node --version 2> error.log",
+          "count": 1
+        },
+        {
+          "command": "node --version > command.log",
+          "count": 1
+        },
+        {
+          "command": "node --version > command.log 2>&1",
+          "count": 1
+        },
+        {
+          "command": "node --version > debug.log",
+          "count": 1
+        },
+        {
+          "command": "node --version > debug.log 2>&1",
+          "count": 1
+        },
+        {
+          "command": "node --version > output.txt",
+          "count": 1
+        },
+        {
+          "command": "node --version > output.txt 2> error.txt",
+          "count": 1
+        },
+        {
+          "command": "node --version > output.txt 2>&1",
+          "count": 1
+        },
+        {
+          "command": "node --version > result.txt",
+          "count": 1
+        },
+        {
+          "command": "node --version > result.txt 2>&1",
+          "count": 1
+        },
+        {
+          "command": "node --version > status.txt",
+          "count": 1
+        },
+        {
+          "command": "node --version > status.txt 2>&1",
+          "count": 1
+        },
+        {
+          "command": "node --version >> command.log",
+          "count": 1
+        },
+        {
+          "command": "node --version >> debug.log",
+          "count": 1
+        },
+        {
+          "command": "node --version >> output.txt",
+          "count": 1
+        },
+        {
+          "command": "node --version >> output.txt 2>&1",
+          "count": 1
+        },
+        {
+          "command": "node --version >> result.txt",
+          "count": 1
+        },
+        {
+          "command": "node --version >> status.txt",
+          "count": 1
+        },
+        {
+          "command": "node --version || echo failed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "getfacl",
+      "count": 23,
+      "commands": [
+        {
+          "command": "getfacl file.txt",
+          "count": 1
+        },
+        {
+          "command": "getfacl -R project/",
+          "count": 1
+        },
+        {
+          "command": "getfacl /etc/hosts",
+          "count": 1
+        },
+        {
+          "command": "getfacl /etc/passwd",
+          "count": 1
+        },
+        {
+          "command": "getfacl /var/log/app.log",
+          "count": 1
+        },
+        {
+          "command": "getfacl config.yaml",
+          "count": 1
+        },
+        {
+          "command": "getfacl credentials.json",
+          "count": 1
+        },
+        {
+          "command": "getfacl private.key",
+          "count": 1
+        },
+        {
+          "command": "getfacl script.sh",
+          "count": 1
+        },
+        {
+          "command": "getfacl secret.env",
+          "count": 1
+        },
+        {
+          "command": "getfacl README.md",
+          "count": 1
+        },
+        {
+          "command": "getfacl access.log",
+          "count": 1
+        },
+        {
+          "command": "getfacl app.log",
+          "count": 1
+        },
+        {
+          "command": "getfacl build",
+          "count": 1
+        },
+        {
+          "command": "getfacl config.json",
+          "count": 1
+        },
+        {
+          "command": "getfacl data.txt",
+          "count": 1
+        },
+        {
+          "command": "getfacl dist",
+          "count": 1
+        },
+        {
+          "command": "getfacl error.log",
+          "count": 1
+        },
+        {
+          "command": "getfacl notes.txt",
+          "count": 1
+        },
+        {
+          "command": "getfacl src/app.js",
+          "count": 1
+        },
+        {
+          "command": "getfacl src/main.cpp",
+          "count": 1
+        },
+        {
+          "command": "getfacl src/main.py",
+          "count": 1
+        },
+        {
+          "command": "getfacl tests/test_app.py",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "psql",
+      "count": 23,
+      "commands": [
+        {
+          "command": "psql -d appdb -c \"SELECT version();\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"\\dt\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"\\du\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"SELECT * FROM users LIMIT 10;\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"SELECT COUNT(*) FROM users;\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"SELECT CURRENT_USER();\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"SELECT DATABASE();\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"SELECT NOW();\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"SHOW DATABASES;\"",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c \"SHOW TABLES;\"",
+          "count": 1
+        },
+        {
+          "command": "psql -h 127.0.0.1 -U postgres -d appdb",
+          "count": 1
+        },
+        {
+          "command": "psql -h database -U postgres -d appdb",
+          "count": 1
+        },
+        {
+          "command": "psql -h db -U postgres -d appdb",
+          "count": 1
+        },
+        {
+          "command": "psql -h localhost -U postgres -d appdb",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c 'SELECT version();'",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c '\\dt'",
+          "count": 1
+        },
+        {
+          "command": "psql -d appdb -c '\\du'",
+          "count": 1
+        },
+        {
+          "command": "psql -d devdb -c 'SELECT version();'",
+          "count": 1
+        },
+        {
+          "command": "psql -d devdb -c '\\dt'",
+          "count": 1
+        },
+        {
+          "command": "psql -d devdb -c '\\du'",
+          "count": 1
+        },
+        {
+          "command": "psql -d testdb -c 'SELECT version();'",
+          "count": 1
+        },
+        {
+          "command": "psql -d testdb -c '\\dt'",
+          "count": 1
+        },
+        {
+          "command": "psql -d testdb -c '\\du'",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "gpg",
+      "count": 22,
+      "commands": [
+        {
+          "command": "gpg",
+          "count": 1
+        },
+        {
+          "command": "gpg --version",
+          "count": 1
+        },
+        {
+          "command": "gpg --list-keys",
+          "count": 1
+        },
+        {
+          "command": "gpg --list-secret-keys",
+          "count": 1
+        },
+        {
+          "command": "gpg --fingerprint",
+          "count": 1
+        },
+        {
+          "command": "gpg --generate-key",
+          "count": 1
+        },
+        {
+          "command": "gpg --export -a username@example.com",
+          "count": 1
+        },
+        {
+          "command": "gpg --import public-key.asc",
+          "count": 1
+        },
+        {
+          "command": "gpg --verify signature.asc file.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --detach-sign file.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --armor --detach-sign file.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --encrypt --recipient username@example.com file.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --decrypt encrypted.gpg",
+          "count": 1
+        },
+        {
+          "command": "gpg --armor --detach-sign artifact.bin",
+          "count": 1
+        },
+        {
+          "command": "gpg --armor --detach-sign document.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --armor --detach-sign message.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --detach-sign artifact.bin",
+          "count": 1
+        },
+        {
+          "command": "gpg --detach-sign document.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --detach-sign message.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --verify signature.asc artifact.bin",
+          "count": 1
+        },
+        {
+          "command": "gpg --verify signature.asc document.txt",
+          "count": 1
+        },
+        {
+          "command": "gpg --verify signature.asc message.txt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "gcloud",
+      "count": 21,
+      "commands": [
+        {
+          "command": "gcloud auth list",
+          "count": 1
+        },
+        {
+          "command": "gcloud config list",
+          "count": 1
+        },
+        {
+          "command": "gcloud projects list",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances list",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances describe example-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute ssh example-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances start example-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances stop example-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud storage cp file.txt gs://example-bucket/",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances describe db-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances describe web-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances describe worker-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances start db-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances start web-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances start worker-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances stop db-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances stop web-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute instances stop worker-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute ssh db-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute ssh web-vm",
+          "count": 1
+        },
+        {
+          "command": "gcloud compute ssh worker-vm",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "mysql",
+      "count": 19,
+      "commands": [
+        {
+          "command": "mysql -e \"SHOW DATABASES;\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SHOW TABLES;\"",
+          "count": 1
+        },
+        {
+          "command": "mysql -h 127.0.0.1 -u root -p",
+          "count": 1
+        },
+        {
+          "command": "mysql -h database -u root -p",
+          "count": 1
+        },
+        {
+          "command": "mysql -h db -u root -p",
+          "count": 1
+        },
+        {
+          "command": "mysql -h localhost -u root -p",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SELECT * FROM users LIMIT 10;\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SELECT COUNT(*) FROM users;\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SELECT CURRENT_USER();\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SELECT DATABASE();\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SELECT NOW();\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SELECT version();\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e \"SHOW DATABASES;\"",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e 'SELECT VERSION();'",
+          "count": 1
+        },
+        {
+          "command": "mysql appdb -e 'SHOW TABLES;'",
+          "count": 1
+        },
+        {
+          "command": "mysql devdb -e 'SELECT VERSION();'",
+          "count": 1
+        },
+        {
+          "command": "mysql devdb -e 'SHOW TABLES;'",
+          "count": 1
+        },
+        {
+          "command": "mysql testdb -e 'SELECT VERSION();'",
+          "count": 1
+        },
+        {
+          "command": "mysql testdb -e 'SHOW TABLES;'",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ssh",
+      "count": 17,
+      "commands": [
+        {
+          "command": "ssh user@example.com",
+          "count": 1
+        },
+        {
+          "command": "ssh user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -p 2222 user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -i ~/.ssh/id_ed25519 user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -L 8080:localhost:80 user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -N user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh user@server 'ps aux | grep nginx | grep -v grep'",
+          "count": 1
+        },
+        {
+          "command": "ssh user@server \"cd /var/log && tail -100 application.log\"",
+          "count": 1
+        },
+        {
+          "command": "ssh -o ConnectTimeout=5 user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -o BatchMode=yes user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -R 9000:localhost:9000 user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -D 1080 user@server",
+          "count": 1
+        },
+        {
+          "command": "ssh -T git@github.com",
+          "count": 1
+        },
+        {
+          "command": "ssh user@server \"hostname\"",
+          "count": 1
+        },
+        {
+          "command": "ssh user@server \"pwd && ls -la\"",
+          "count": 1
+        },
+        {
+          "command": "ssh user@server \"systemctl status nginx\"",
+          "count": 1
+        },
+        {
+          "command": "ssh user@server \"tail -100 /var/log/application.log\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "az",
+      "count": 16,
+      "commands": [
+        {
+          "command": "az account show",
+          "count": 1
+        },
+        {
+          "command": "az account list",
+          "count": 1
+        },
+        {
+          "command": "az group list",
+          "count": 1
+        },
+        {
+          "command": "az vm list",
+          "count": 1
+        },
+        {
+          "command": "az vm show -g example-rg -n example-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm start -g example-rg -n example-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm stop -g example-rg -n example-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm show -g example-rg -n db-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm show -g example-rg -n web-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm show -g example-rg -n worker-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm start -g example-rg -n db-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm start -g example-rg -n web-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm start -g example-rg -n worker-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm stop -g example-rg -n db-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm stop -g example-rg -n web-vm",
+          "count": 1
+        },
+        {
+          "command": "az vm stop -g example-rg -n worker-vm",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "dmesg",
+      "count": 12,
+      "commands": [
+        {
+          "command": "dmesg | tail",
+          "count": 1
+        },
+        {
+          "command": "dmesg",
+          "count": 1
+        },
+        {
+          "command": "dmesg --level=err,warn",
+          "count": 1
+        },
+        {
+          "command": "dmesg -T | tail -50",
+          "count": 1
+        },
+        {
+          "command": "dmesg -T | grep -i error",
+          "count": 1
+        },
+        {
+          "command": "dmesg -T",
+          "count": 1
+        },
+        {
+          "command": "dmesg | tail -n 1",
+          "count": 1
+        },
+        {
+          "command": "dmesg | tail -n 10",
+          "count": 1
+        },
+        {
+          "command": "dmesg | tail -n 2",
+          "count": 1
+        },
+        {
+          "command": "dmesg | tail -n 20",
+          "count": 1
+        },
+        {
+          "command": "dmesg | tail -n 5",
+          "count": 1
+        },
+        {
+          "command": "dmesg | tail -n 50",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ufw",
+      "count": 11,
+      "commands": [
+        {
+          "command": "ufw",
+          "count": 1
+        },
+        {
+          "command": "ufw status",
+          "count": 1
+        },
+        {
+          "command": "ufw status verbose",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw allow 22/tcp",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw allow 80/tcp",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw allow 443/tcp",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw deny 23/tcp",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw delete allow 80/tcp",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw reload",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw enable",
+          "count": 1
+        },
+        {
+          "command": "sudo ufw disable",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "sqlite3",
+      "count": 10,
+      "commands": [
+        {
+          "command": "sqlite3 app.db \".tables\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \".schema\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \"SELECT * FROM users;\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \"SELECT COUNT(*) FROM users;\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \".headers on\" \".mode column\" \"SELECT * FROM users;\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \".databases\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \".indexes\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \".dump\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \".backup backup.db\"",
+          "count": 1
+        },
+        {
+          "command": "sqlite3 app.db \"PRAGMA integrity_check;\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "firewall-cmd",
+      "count": 9,
+      "commands": [
+        {
+          "command": "firewall-cmd",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --state",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --list-all",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --list-services",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --list-ports",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --add-service=http",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --remove-service=http",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --add-port=8080/tcp",
+          "count": 1
+        },
+        {
+          "command": "sudo firewall-cmd --remove-port=8080/tcp",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "usermod",
+      "count": 7,
+      "commands": [
+        {
+          "command": "usermod -aG sudo testuser",
+          "count": 1
+        },
+        {
+          "command": "usermod -s /bin/bash testuser",
+          "count": 1
+        },
+        {
+          "command": "usermod -L username",
+          "count": 1
+        },
+        {
+          "command": "usermod -U username",
+          "count": 1
+        },
+        {
+          "command": "usermod -e 2026-12-31 username",
+          "count": 1
+        },
+        {
+          "command": "usermod -aG developers username",
+          "count": 1
+        },
+        {
+          "command": "usermod -aG docker username",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ssh-keygen",
+      "count": 7,
+      "commands": [
+        {
+          "command": "ssh-keygen",
+          "count": 1
+        },
+        {
+          "command": "ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519",
+          "count": 1
+        },
+        {
+          "command": "ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa",
+          "count": 1
+        },
+        {
+          "command": "ssh-keygen -lf ~/.ssh/id_ed25519.pub",
+          "count": 1
+        },
+        {
+          "command": "ssh-keygen -y -f ~/.ssh/id_ed25519",
+          "count": 1
+        },
+        {
+          "command": "ssh-keygen -F example.com",
+          "count": 1
+        },
+        {
+          "command": "ssh-keygen -R example.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "python",
+      "count": 6,
+      "commands": [
+        {
+          "command": "python app.py && echo \"completed\"",
+          "count": 1
+        },
+        {
+          "command": "PORT=8080 python server.py",
+          "count": 1
+        },
+        {
+          "command": "nohup python server.py",
+          "count": 1
+        },
+        {
+          "command": "python server.py &",
+          "count": 1
+        },
+        {
+          "command": "python server.py > server.log 2>&1 &",
+          "count": 1
+        },
+        {
+          "command": "nohup python server.py &",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "make",
+      "count": 6,
+      "commands": [
+        {
+          "command": "make",
+          "count": 1
+        },
+        {
+          "command": "make clean",
+          "count": 1
+        },
+        {
+          "command": "make all",
+          "count": 1
+        },
+        {
+          "command": "make test",
+          "count": 1
+        },
+        {
+          "command": "make -j$(nproc)",
+          "count": 1
+        },
+        {
+          "command": "make clean && make",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "test",
+      "count": 5,
+      "commands": [
+        {
+          "command": "test -f file.txt && echo \"exists\"",
+          "count": 1
+        },
+        {
+          "command": "test -d project && echo \"directory exists\"",
+          "count": 1
+        },
+        {
+          "command": "test -f file.txt",
+          "count": 1
+        },
+        {
+          "command": "test -f file.txt && echo \"File exists\"",
+          "count": 1
+        },
+        {
+          "command": "test -f file.txt || echo \"File missing\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "useradd",
+      "count": 5,
+      "commands": [
+        {
+          "command": "useradd testuser",
+          "count": 1
+        },
+        {
+          "command": "useradd -m testuser",
+          "count": 1
+        },
+        {
+          "command": "useradd -s /bin/bash testuser",
+          "count": 1
+        },
+        {
+          "command": "useradd -m -s /bin/bash testuser",
+          "count": 1
+        },
+        {
+          "command": "useradd -r serviceuser",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "jq",
+      "count": 5,
+      "commands": [
+        {
+          "command": "jq -c '. | select(.category == \"filesystem\")' commands.jsonl",
+          "count": 1
+        },
+        {
+          "command": "jq -r '.command' commands.jsonl",
+          "count": 1
+        },
+        {
+          "command": "jq -r '.command' commands.jsonl | sort -u",
+          "count": 1
+        },
+        {
+          "command": "jq -s 'length' commands.jsonl",
+          "count": 1
+        },
+        {
+          "command": "jq -s 'group_by(.category) | map({category: .[0].category, count: length})' commands.jsonl",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "iptables",
+      "count": 5,
+      "commands": [
+        {
+          "command": "iptables",
+          "count": 1
+        },
+        {
+          "command": "sudo iptables -L",
+          "count": 1
+        },
+        {
+          "command": "sudo iptables -L -n -v",
+          "count": 1
+        },
+        {
+          "command": "sudo iptables -S",
+          "count": 1
+        },
+        {
+          "command": "sudo iptables -t nat -L",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "setfacl",
+      "count": 5,
+      "commands": [
+        {
+          "command": "setfacl -m u:username:r file.txt",
+          "count": 1
+        },
+        {
+          "command": "setfacl -m u:username:rw file.txt",
+          "count": 1
+        },
+        {
+          "command": "setfacl -m g:developers:rwx project/",
+          "count": 1
+        },
+        {
+          "command": "setfacl -x u:username file.txt",
+          "count": 1
+        },
+        {
+          "command": "setfacl -b file.txt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "bzip2",
+      "count": 5,
+      "commands": [
+        {
+          "command": "bzip2 file.txt",
+          "count": 1
+        },
+        {
+          "command": "bzip2 app.log",
+          "count": 1
+        },
+        {
+          "command": "bzip2 backup.sql",
+          "count": 1
+        },
+        {
+          "command": "bzip2 data.csv",
+          "count": 1
+        },
+        {
+          "command": "bzip2 project.zip",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "greet",
+      "count": 4,
+      "commands": [
+        {
+          "command": "function greet() { echo \"Hello\"; }",
+          "count": 1
+        },
+        {
+          "command": "greet",
+          "count": 1
+        },
+        {
+          "command": "greet() { echo \"Hello $1\"; }",
+          "count": 1
+        },
+        {
+          "command": "greet Paras",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "cmake",
+      "count": 4,
+      "commands": [
+        {
+          "command": "cmake -S . -B build",
+          "count": 1
+        },
+        {
+          "command": "cmake --build build",
+          "count": 1
+        },
+        {
+          "command": "cmake --build build --parallel",
+          "count": 1
+        },
+        {
+          "command": "cmake -S . -B build && cmake --build build",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ssh-add",
+      "count": 4,
+      "commands": [
+        {
+          "command": "ssh-add",
+          "count": 1
+        },
+        {
+          "command": "ssh-add -l",
+          "count": 1
+        },
+        {
+          "command": "ssh-add ~/.ssh/id_ed25519",
+          "count": 1
+        },
+        {
+          "command": "ssh-add -D",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "nft",
+      "count": 4,
+      "commands": [
+        {
+          "command": "nft",
+          "count": 1
+        },
+        {
+          "command": "sudo nft list ruleset",
+          "count": 1
+        },
+        {
+          "command": "sudo nft list tables",
+          "count": 1
+        },
+        {
+          "command": "sudo nft list chains",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "redis-cli",
+      "count": 4,
+      "commands": [
+        {
+          "command": "redis-cli INFO",
+          "count": 1
+        },
+        {
+          "command": "redis-cli KEYS 'app:*'",
+          "count": 1
+        },
+        {
+          "command": "redis-cli GET app:status",
+          "count": 1
+        },
+        {
+          "command": "redis-cli SET app:status running",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "command1",
+      "count": 3,
+      "commands": [
+        {
+          "command": "command1; command2",
+          "count": 1
+        },
+        {
+          "command": "command1 || echo \"failed\"",
+          "count": 1
+        },
+        {
+          "command": "command1 & command2",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "source",
+      "count": 3,
+      "commands": [
+        {
+          "command": "source .venv/bin/activate",
+          "count": 1
+        },
+        {
+          "command": "source",
+          "count": 1
+        },
+        {
+          "command": "source ./config.sh",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "unset",
+      "count": 3,
+      "commands": [
+        {
+          "command": "unset NAME",
+          "count": 1
+        },
+        {
+          "command": "unset VAR",
+          "count": 1
+        },
+        {
+          "command": "unset DEBUG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "true",
+      "count": 3,
+      "commands": [
+        {
+          "command": "true",
+          "count": 1
+        },
+        {
+          "command": "true || echo \"fallback\"",
+          "count": 1
+        },
+        {
+          "command": "sudo -n true",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "[",
+      "count": 3,
+      "commands": [
+        {
+          "command": "[ -d project ] && cd project",
+          "count": 1
+        },
+        {
+          "command": "[ -f config.json ] && cat config.json",
+          "count": 1
+        },
+        {
+          "command": "[ \"$USER\" = \"root\" ] && echo \"Privileged\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ln",
+      "count": 3,
+      "commands": [
+        {
+          "command": "ln file.txt hardlink.txt",
+          "count": 1
+        },
+        {
+          "command": "ln -s file.txt symlink.txt",
+          "count": 1
+        },
+        {
+          "command": "ln -sf /opt/app/current /opt/app/previous",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ssh-keyscan",
+      "count": 3,
+      "commands": [
+        {
+          "command": "ssh-keyscan",
+          "count": 1
+        },
+        {
+          "command": "ssh-keyscan example.com",
+          "count": 1
+        },
+        {
+          "command": "ssh-keyscan -p 2222 example.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "networkctl",
+      "count": 3,
+      "commands": [
+        {
+          "command": "networkctl",
+          "count": 1
+        },
+        {
+          "command": "networkctl status",
+          "count": 1
+        },
+        {
+          "command": "networkctl list",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "7z",
+      "count": 3,
+      "commands": [
+        {
+          "command": "7z l archive.7z",
+          "count": 1
+        },
+        {
+          "command": "7z a archive.7z project/",
+          "count": 1
+        },
+        {
+          "command": "7z x archive.7z",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "systemd-analyze",
+      "count": 3,
+      "commands": [
+        {
+          "command": "systemd-analyze",
+          "count": 1
+        },
+        {
+          "command": "systemd-analyze blame",
+          "count": 1
+        },
+        {
+          "command": "systemd-analyze critical-chain",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ansible",
+      "count": 3,
+      "commands": [
+        {
+          "command": "ansible all -m ping",
+          "count": 1
+        },
+        {
+          "command": "ansible web -m shell -a \"hostname\"",
+          "count": 1
+        },
+        {
+          "command": "ansible web -m command -a \"uptime\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "black",
+      "count": 3,
+      "commands": [
+        {
+          "command": "black .",
+          "count": 1
+        },
+        {
+          "command": "black src/",
+          "count": 1
+        },
+        {
+          "command": "black tests/",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "flake8",
+      "count": 3,
+      "commands": [
+        {
+          "command": "flake8 .",
+          "count": 1
+        },
+        {
+          "command": "flake8 src/",
+          "count": 1
+        },
+        {
+          "command": "flake8 tests/",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "mypy",
+      "count": 3,
+      "commands": [
+        {
+          "command": "mypy .",
+          "count": 1
+        },
+        {
+          "command": "mypy src/",
+          "count": 1
+        },
+        {
+          "command": "mypy tests/",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "umask",
+      "count": 2,
+      "commands": [
+        {
+          "command": "umask",
+          "count": 1
+        },
+        {
+          "command": "umask 022",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "jobs",
+      "count": 2,
+      "commands": [
+        {
+          "command": "jobs",
+          "count": 1
+        },
+        {
+          "command": "jobs -l",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "fg",
+      "count": 2,
+      "commands": [
+        {
+          "command": "fg",
+          "count": 1
+        },
+        {
+          "command": "fg %1",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "bg",
+      "count": 2,
+      "commands": [
+        {
+          "command": "bg",
+          "count": 1
+        },
+        {
+          "command": "bg %1",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "sleep",
+      "count": 2,
+      "commands": [
+        {
+          "command": "sleep 10 &",
+          "count": 1
+        },
+        {
+          "command": "sleep 5 &",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "alias",
+      "count": 2,
+      "commands": [
+        {
+          "command": "alias ll='ls -la'",
+          "count": 1
+        },
+        {
+          "command": "alias",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "false",
+      "count": 2,
+      "commands": [
+        {
+          "command": "false",
+          "count": 1
+        },
+        {
+          "command": "false || echo \"fallback\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "install",
+      "count": 2,
+      "commands": [
+        {
+          "command": "install -D script.sh /usr/local/bin/script.sh",
+          "count": 1
+        },
+        {
+          "command": "install -m 755 script.sh /usr/local/bin/script.sh",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "10",
+      "count": 2,
+      "commands": [
+        {
+          "command": "nice -n 10 python script.py",
+          "count": 1
+        },
+        {
+          "command": "nice -n 10 ./worker",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "./server.sh",
+      "count": 2,
+      "commands": [
+        {
+          "command": "nohup ./server.sh > server.log 2>&1 &",
+          "count": 1
+        },
+        {
+          "command": "nohup ./server.sh &",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "backup",
+      "count": 2,
+      "commands": [
+        {
+          "command": "function backup() { cp \"$1\" \"$1.bak\"; }",
+          "count": 1
+        },
+        {
+          "command": "backup file.txt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "username",
+      "count": 2,
+      "commands": [
+        {
+          "command": "sudo -u username whoami",
+          "count": 1
+        },
+        {
+          "command": "sudo -H -u username bash",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "userdel",
+      "count": 2,
+      "commands": [
+        {
+          "command": "userdel testuser",
+          "count": 1
+        },
+        {
+          "command": "userdel -r testuser",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "groupadd",
+      "count": 2,
+      "commands": [
+        {
+          "command": "groupadd developers",
+          "count": 1
+        },
+        {
+          "command": "groupadd -g 1500 developers",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "www-data",
+      "count": 2,
+      "commands": [
+        {
+          "command": "sudo -u www-data ls /var/www",
+          "count": 1
+        },
+        {
+          "command": "sudo -u www-data id",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "backup_file",
+      "count": 2,
+      "commands": [
+        {
+          "command": "backup_file() { cp \"$1\" \"$1.bak\"; }",
+          "count": 1
+        },
+        {
+          "command": "backup_file document.txt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "count_lines",
+      "count": 2,
+      "commands": [
+        {
+          "command": "count_lines() { wc -l \"$1\"; }",
+          "count": 1
+        },
+        {
+          "command": "count_lines application.log",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "show_status",
+      "count": 2,
+      "commands": [
+        {
+          "command": "show_status() { git status --short; }",
+          "count": 1
+        },
+        {
+          "command": "show_status",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "count_errors",
+      "count": 2,
+      "commands": [
+        {
+          "command": "count_errors() { grep -ci \"error\" \"$1\"; }",
+          "count": 1
+        },
+        {
+          "command": "count_errors application.log",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "show_logs",
+      "count": 2,
+      "commands": [
+        {
+          "command": "show_logs() { tail -100 \"$1\" | grep -i error; }",
+          "count": 1
+        },
+        {
+          "command": "show_logs application.log",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "get_processes",
+      "count": 2,
+      "commands": [
+        {
+          "command": "get_processes() { ps aux | grep \"$1\" | grep -v grep; }",
+          "count": 1
+        },
+        {
+          "command": "get_processes python",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "tree",
+      "count": 2,
+      "commands": [
+        {
+          "command": "tree -L 2",
+          "count": 1
+        },
+        {
+          "command": "tree -a -L 3",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "route",
+      "count": 2,
+      "commands": [
+        {
+          "command": "route",
+          "count": 1
+        },
+        {
+          "command": "route -n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "arp",
+      "count": 2,
+      "commands": [
+        {
+          "command": "arp",
+          "count": 1
+        },
+        {
+          "command": "arp -n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "socat",
+      "count": 2,
+      "commands": [
+        {
+          "command": "socat",
+          "count": 1
+        },
+        {
+          "command": "socat - TCP:example.com:80",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": ".",
+      "count": 2,
+      "commands": [
+        {
+          "command": ". ./script.sh",
+          "count": 1
+        },
+        {
+          "command": ". ./config.sh",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "eval",
+      "count": 2,
+      "commands": [
+        {
+          "command": "eval",
+          "count": 1
+        },
+        {
+          "command": "eval 'echo hello'",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "shift",
+      "count": 2,
+      "commands": [
+        {
+          "command": "shift",
+          "count": 1
+        },
+        {
+          "command": "shift 2",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "getopts",
+      "count": 2,
+      "commands": [
+        {
+          "command": "getopts",
+          "count": 1
+        },
+        {
+          "command": "getopts \"f:v:\" opt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "setcap",
+      "count": 2,
+      "commands": [
+        {
+          "command": "setcap cap_net_bind_service=+ep ./server",
+          "count": 1
+        },
+        {
+          "command": "setcap -r ./server",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "dd",
+      "count": 2,
+      "commands": [
+        {
+          "command": "dd if=/dev/zero of=./test.img bs=1M count=1",
+          "count": 1
+        },
+        {
+          "command": "dd if=./test.img of=./test-copy.img bs=1M",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "snap",
+      "count": 2,
+      "commands": [
+        {
+          "command": "snap list",
+          "count": 1
+        },
+        {
+          "command": "snap find package",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "flatpak",
+      "count": 2,
+      "commands": [
+        {
+          "command": "flatpak list",
+          "count": 1
+        },
+        {
+          "command": "flatpak info org.example.App",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "history",
+      "count": 1,
+      "commands": [
+        {
+          "command": "history | tail",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "./app",
+      "count": 1,
+      "commands": [
+        {
+          "command": "APP_ENV=production ./app",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "long_running_command",
+      "count": 1,
+      "commands": [
+        {
+          "command": "long_running_command &",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "blkid",
+      "count": 1,
+      "commands": [
+        {
+          "command": "blkid",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "sync",
+      "count": 1,
+      "commands": [
+        {
+          "command": "sync",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "users",
+      "count": 1,
+      "commands": [
+        {
+          "command": "users",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "cmp",
+      "count": 1,
+      "commands": [
+        {
+          "command": "cmp file1.bin file2.bin",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "split",
+      "count": 1,
+      "commands": [
+        {
+          "command": "split -l 1000 large.txt part_",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "bash",
+      "count": 1,
+      "commands": [
+        {
+          "command": "command -v bash",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "whereis",
+      "count": 1,
+      "commands": [
+        {
+          "command": "whereis bash",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "unalias",
+      "count": 1,
+      "commands": [
+        {
+          "command": "unalias ll",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "declare",
+      "count": 1,
+      "commands": [
+        {
+          "command": "declare -p PATH",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "readonly",
+      "count": 1,
+      "commands": [
+        {
+          "command": "readonly VAR=value",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "root",
+      "count": 1,
+      "commands": [
+        {
+          "command": "sudo -u root id",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "groupdel",
+      "count": 1,
+      "commands": [
+        {
+          "command": "groupdel developers",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "swapon",
+      "count": 1,
+      "commands": [
+        {
+          "command": "swapon --show",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "postgres",
+      "count": 1,
+      "commands": [
+        {
+          "command": "sudo -u postgres psql",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "lastb",
+      "count": 1,
+      "commands": [
+        {
+          "command": "lastb | head -20",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "10s",
+      "count": 1,
+      "commands": [
+        {
+          "command": "timeout 10s python server.py",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "5m",
+      "count": 1,
+      "commands": [
+        {
+          "command": "timeout 5m ./backup.sh",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "30s",
+      "count": 1,
+      "commands": [
+        {
+          "command": "timeout --signal=TERM 30s ./worker",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "5",
+      "count": 1,
+      "commands": [
+        {
+          "command": "nice -n 5 ./worker",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "3",
+      "count": 1,
+      "commands": [
+        {
+          "command": "ionice -c 3 ./backup.sh",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "at",
+      "count": 1,
+      "commands": [
+        {
+          "command": "at 10:00",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "atq",
+      "count": 1,
+      "commands": [
+        {
+          "command": "atq",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "atrm",
+      "count": 1,
+      "commands": [
+        {
+          "command": "atrm 5",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "git",
+      "count": 1,
+      "commands": [
+        {
+          "command": "git check-ignore -v .env",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ctest",
+      "count": 1,
+      "commands": [
+        {
+          "command": "ctest --test-dir build",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "./configure",
+      "count": 1,
+      "commands": [
+        {
+          "command": "./configure && make",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "auditd",
+      "count": 1,
+      "commands": [
+        {
+          "command": "auditd",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "semanage",
+      "count": 1,
+      "commands": [
+        {
+          "command": "semanage",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "getenforce",
+      "count": 1,
+      "commands": [
+        {
+          "command": "getenforce",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "aa-status",
+      "count": 1,
+      "commands": [
+        {
+          "command": "aa-status",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "apparmor_parser",
+      "count": 1,
+      "commands": [
+        {
+          "command": "apparmor_parser",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "nmtui",
+      "count": 1,
+      "commands": [
+        {
+          "command": "nmtui",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "netcat",
+      "count": 1,
+      "commands": [
+        {
+          "command": "netcat -vz example.com 443",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "return",
+      "count": 1,
+      "commands": [
+        {
+          "command": "return",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "exit",
+      "count": 1,
+      "commands": [
+        {
+          "command": "exit",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "developers",
+      "count": 1,
+      "commands": [
+        {
+          "command": "sudo -g developers id",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "sudoedit",
+      "count": 1,
+      "commands": [
+        {
+          "command": "sudoedit /etc/hosts",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "visudo",
+      "count": 1,
+      "commands": [
+        {
+          "command": "visudo",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "faillock",
+      "count": 1,
+      "commands": [
+        {
+          "command": "faillock --user username",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "capsh",
+      "count": 1,
+      "commands": [
+        {
+          "command": "capsh --print",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ip6tables",
+      "count": 1,
+      "commands": [
+        {
+          "command": "sudo ip6tables -L",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "sestatus",
+      "count": 1,
+      "commands": [
+        {
+          "command": "sestatus",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "fstrim",
+      "count": 1,
+      "commands": [
+        {
+          "command": "fstrim -av",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "xz",
+      "count": 1,
+      "commands": [
+        {
+          "command": "xz file.txt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "zstd",
+      "count": 1,
+      "commands": [
+        {
+          "command": "zstd file.txt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "disown",
+      "count": 1,
+      "commands": [
+        {
+          "command": "disown %1",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "60s",
+      "count": 1,
+      "commands": [
+        {
+          "command": "timeout --signal=TERM 60s ./worker",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "watch",
+      "count": 1,
+      "commands": [
+        {
+          "command": "watch -n 2 \"ps aux | head\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "./server",
+      "count": 1,
+      "commands": [
+        {
+          "command": "exec ./server",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "builtin",
+      "count": 1,
+      "commands": [
+        {
+          "command": "builtin cd /tmp",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "mapfile",
+      "count": 1,
+      "commands": [
+        {
+          "command": "mapfile -t files < <(find . -type f)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ansible-inventory",
+      "count": 1,
+      "commands": [
+        {
+          "command": "ansible-inventory --list",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "ruby",
+      "count": 1,
+      "commands": [
+        {
+          "command": "ruby script.rb",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "php",
+      "count": 1,
+      "commands": [
+        {
+          "command": "php -S localhost:8000",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "program": "pg_restore",
+      "count": 1,
+      "commands": [
+        {
+          "command": "pg_restore -d appdb backup.dump",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

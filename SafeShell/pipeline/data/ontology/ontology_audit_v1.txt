@@ -1,0 +1,170 @@
+========================================================================
+SafeShell Ontology Audit V1
+========================================================================
+Input                 : /home/paras/Desktop/SafeShell/data/enriched/enriched_commands_v7.jsonl
+Records               : 15225
+Valid                 : 15225
+Malformed             : 0
+Duplicate IDs         : 0
+Unique programs       : 301
+Unique domains        : 22
+Unique operations     : 148
+Unique operation_details: 386
+
+Intent labels         : 33
+Risk labels           : 5
+Strongly mapped       : 15149
+Candidate mapped      : 15197
+Unmapped operation rows: 28
+
+Candidate intent distribution:
+  search                   3188
+  inspect                  2876
+  execute                  1366
+  extract                  911
+  read                     863
+  manage_permissions       663
+  manage_container         645
+  list                     411
+  sort                     364
+  shell_control            345
+  version_control          336
+  copy                     331
+  connect                  324
+  manage_package           270
+  transform                262
+  filter                   260
+  move                     256
+  delete                   221
+  transfer                 220
+  manage_network           177
+  manage_process           115
+  install                  103
+  security_operation       101
+  manage_identity          86
+  uninstall                81
+  manage_service           77
+  manage_database          74
+  manage_cloud             70
+  modify                   55
+  configure                51
+  create                   50
+  archive                  45
+  unknown                  28
+
+Unmapped operations:
+  unknown                          28
+
+Ambiguous/review operations:
+  search_and_execute               602
+  modify_or_execute                318
+  delete_or_modify                 122
+  unknown                          28
+  checksum                         6
+  build                            6
+  return_status                    5
+  partition                        5
+  resume_job                       4
+  audit_management                 4
+  infrastructure_operation         4
+  inspect_system                   3
+  lint_code                        3
+  type_check                       3
+  inspect_jobs                     2
+  system_configuration             2
+  security_configuration           1
+
+Top operations and candidate mappings:
+  search_text                        1743 -> search                 [exact]
+  inspect                            1400 -> inspect                [exact]
+  search                             1393 -> search                 [exact]
+  extract_fields                      903 -> extract                [exact]
+  read                                858 -> read                   [exact]
+  search_and_execute                  602 -> execute                [detail] REVIEW
+  list                                411 -> list                   [exact]
+  change_permissions                  384 -> manage_permissions     [exact]
+  network_request                     367 -> ambiguous              [mixed_details] REVIEW
+  sort                                364 -> sort                   [exact]
+  copy                                331 -> copy                   [detail]
+  package_management                  323 -> ambiguous              [mixed_details] REVIEW
+  modify_or_execute                   318 -> ambiguous              [mixed_details] REVIEW
+  output                              314 -> execute                [exact]
+  inspect_usage                       270 -> inspect                [exact]
+  filter_text                         260 -> filter                 [exact]
+  container_operation                 260 -> manage_container       [exact]
+  move                                256 -> move                   [detail]
+  change_owner                        256 -> manage_permissions     [exact]
+  transform_text                      245 -> transform              [exact]
+  inspect_logs                        233 -> inspect                [exact]
+  delete                              220 -> delete                 [detail]
+  inspect_processes                   207 -> inspect                [exact]
+  kubernetes_operation                173 -> manage_container       [exact]
+  inspect_environment                 167 -> inspect                [exact]
+  version_control                     147 -> version_control        [exact]
+  network_configuration               143 -> manage_network         [exact]
+  control_structure                   142 -> shell_control          [exact]
+  formatted_output                    129 -> execute                [exact]
+  delete_or_modify                    122 -> ambiguous              [mixed_details] REVIEW
+  execute_program                     110 -> execute                [lexical]
+  terminate_process                   103 -> manage_process         [exact]
+  inspect_system                      103 -> ambiguous              [mixed_details] REVIEW
+  file_transfer                       102 -> transfer               [detail]
+  set_environment                      98 -> shell_control          [exact]
+  manage_service                       97 -> ambiguous              [mixed_details] REVIEW
+  compile                              94 -> execute                [lexical]
+  inspect_package                      82 -> manage_package         [lexical]
+  inspect_resources                    80 -> inspect                [exact]
+  dns_lookup                           78 -> inspect                [exact]
+  cloud_operation                      68 -> manage_cloud           [exact]
+  inspect_location                     67 -> inspect                [exact]
+  database_operation                   62 -> manage_database        [exact]
+  cryptographic_operation              62 -> security_operation     [exact]
+  network_connection                   57 -> connect                [lexical]
+  manage_group                         55 -> manage_identity        [exact]
+  search_processes                     48 -> search                 [lexical]
+  modify_text                          48 -> modify                 [detail]
+  inspect_command                      42 -> ambiguous              [mixed_details] REVIEW
+  configuration_automation             39 -> execute                [detail]
+  connectivity_test                    37 -> inspect                [exact]
+  build                                35 -> execute                [detail]
+  manage_user                          30 -> manage_identity        [exact]
+  firewall_management                  30 -> manage_network         [exact]
+  generate_sequence                    30 -> create                 [detail]
+  checksum                             29 -> ambiguous              [mixed_details] REVIEW
+  unknown                              28 -> unknown                [unmapped] REVIEW
+  inspect_identity                     28 -> inspect                [exact]
+  archive                              27 -> archive                [exact]
+  inspect_capabilities                 26 -> inspect                [exact]
+  identity_lookup                      24 -> inspect                [exact]
+  inspect_interface                    23 -> inspect                [exact]
+  inspect_permissions                  23 -> manage_permissions     [lexical]
+  conditional_test                     19 -> shell_control          [detail]
+  manage_package_state                 19 -> manage_package         [lexical]
+  remote_access                        18 -> ambiguous              [mixed_details] REVIEW
+  create                               17 -> create                 [detail]
+  inspect_connections                  17 -> inspect                [exact]
+  compress                             17 -> archive                [exact]
+  key_management                       14 -> security_operation     [detail]
+  change_directory                     13 -> shell_control          [exact]
+  inspect_devices                      13 -> inspect                [exact]
+  inspect_groups                       12 -> inspect                [exact]
+  inspect_login_history                12 -> inspect                [exact]
+  infrastructure_operation             12 -> ambiguous              [mixed_details] REVIEW
+  shell_configuration                  11 -> shell_control          [lexical]
+  execute_package_binary               11 -> execute                [exact]
+  database_backup                      11 -> manage_database        [exact]
+  route_diagnostic                     10 -> inspect                [exact]
+  set_variable                          9 -> shell_control          [detail]
+
+Risk features:
+  external_execution           14294
+  modifies_data                2329
+  destructive                  1402
+  network_operation            912
+  security_sensitive           902
+  modifies_permissions         668
+  force                        574
+  recursive                    345
+  has_shell_control            214
+  privileged                   122
+========================================================================

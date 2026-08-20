@@ -1,0 +1,3098 @@
+{
+  "schema_version": "ontology-v1",
+  "input": "/home/paras/Desktop/SafeShell/data/enriched/enriched_commands_v7.jsonl",
+  "ontology": {
+    "intent_labels": [
+      "inspect",
+      "search",
+      "list",
+      "read",
+      "create",
+      "modify",
+      "delete",
+      "copy",
+      "move",
+      "execute",
+      "transform",
+      "filter",
+      "sort",
+      "extract",
+      "configure",
+      "install",
+      "uninstall",
+      "connect",
+      "transfer",
+      "manage_permissions",
+      "manage_identity",
+      "manage_process",
+      "manage_service",
+      "manage_package",
+      "manage_container",
+      "manage_network",
+      "manage_cloud",
+      "manage_database",
+      "archive",
+      "security_operation",
+      "version_control",
+      "shell_control",
+      "unknown"
+    ],
+    "intent_count": 33,
+    "risk_labels": [
+      "safe",
+      "low",
+      "medium",
+      "high",
+      "critical"
+    ],
+    "risk_count": 5,
+    "note": "This script audits candidate mappings; it does not create gold labels."
+  },
+  "dataset": {
+    "total_records": 15225,
+    "valid_records": 15225,
+    "malformed_records": 0,
+    "duplicate_ids": 0,
+    "unique_ids": 15225,
+    "unique_programs": 301,
+    "unique_domains": 22,
+    "unique_operations": 148,
+    "unique_operation_details": 386
+  },
+  "coverage": {
+    "candidate_mapped_records": 15197,
+    "strongly_mapped_records": 15149,
+    "unmapped_operation_records": 28,
+    "mapping_sources": {
+      "exact": 11908,
+      "detail": 2768,
+      "lexical": 473,
+      "unmapped": 28,
+      "domain_fallback": 48
+    }
+  },
+  "distributions": {
+    "domains": {
+      "filesystem": 4215,
+      "text_processing": 3616,
+      "shell": 1032,
+      "version_control": 958,
+      "network": 862,
+      "permissions": 694,
+      "kubernetes": 610,
+      "container": 554,
+      "package": 497,
+      "process": 399,
+      "disk_storage": 316,
+      "development": 272,
+      "system_logging": 233,
+      "service": 214,
+      "system": 183,
+      "security": 162,
+      "user_account": 143,
+      "database": 74,
+      "cloud": 68,
+      "archive_compression": 48,
+      "automation": 47,
+      "other": 28
+    },
+    "operations": {
+      "search_text": 1743,
+      "inspect": 1400,
+      "search": 1393,
+      "extract_fields": 903,
+      "read": 858,
+      "search_and_execute": 602,
+      "list": 411,
+      "change_permissions": 384,
+      "network_request": 367,
+      "sort": 364,
+      "copy": 331,
+      "package_management": 323,
+      "modify_or_execute": 318,
+      "output": 314,
+      "inspect_usage": 270,
+      "filter_text": 260,
+      "container_operation": 260,
+      "move": 256,
+      "change_owner": 256,
+      "transform_text": 245,
+      "inspect_logs": 233,
+      "delete": 220,
+      "inspect_processes": 207,
+      "kubernetes_operation": 173,
+      "inspect_environment": 167,
+      "version_control": 147,
+      "network_configuration": 143,
+      "control_structure": 142,
+      "formatted_output": 129,
+      "delete_or_modify": 122,
+      "execute_program": 110,
+      "terminate_process": 103,
+      "inspect_system": 103,
+      "file_transfer": 102,
+      "set_environment": 98,
+      "manage_service": 97,
+      "compile": 94,
+      "inspect_package": 82,
+      "inspect_resources": 80,
+      "dns_lookup": 78,
+      "cloud_operation": 68,
+      "inspect_location": 67,
+      "database_operation": 62,
+      "cryptographic_operation": 62,
+      "network_connection": 57,
+      "manage_group": 55,
+      "search_processes": 48,
+      "modify_text": 48,
+      "inspect_command": 42,
+      "configuration_automation": 39,
+      "connectivity_test": 37,
+      "build": 35,
+      "manage_user": 30,
+      "firewall_management": 30,
+      "generate_sequence": 30,
+      "checksum": 29,
+      "unknown": 28,
+      "inspect_identity": 28,
+      "archive": 27,
+      "inspect_capabilities": 26,
+      "identity_lookup": 24,
+      "inspect_interface": 23,
+      "inspect_permissions": 23,
+      "conditional_test": 19,
+      "manage_package_state": 19,
+      "remote_access": 18,
+      "create": 17,
+      "inspect_connections": 17,
+      "compress": 17,
+      "key_management": 14,
+      "change_directory": 13,
+      "inspect_devices": 13,
+      "inspect_groups": 12,
+      "inspect_login_history": 12,
+      "infrastructure_operation": 12,
+      "shell_configuration": 11,
+      "execute_package_binary": 11,
+      "database_backup": 11,
+      "route_diagnostic": 10,
+      "set_variable": 9,
+      "mount": 7,
+      "compare": 7,
+      "inspect_storage": 7,
+      "security_configuration": 6,
+      "packet_capture": 6,
+      "count": 5,
+      "source_script": 5,
+      "inspect_sessions": 5,
+      "return_status": 5,
+      "transform_json": 5,
+      "partition": 5,
+      "resume_job": 4,
+      "inspect_mounts": 4,
+      "privilege_wrapper": 4,
+      "read_input": 4,
+      "replace_process": 4,
+      "schedule_task": 4,
+      "audit_management": 4,
+      "audit_search": 4,
+      "dns_configuration": 4,
+      "signal_handler": 4,
+      "deduplicate": 3,
+      "wait": 3,
+      "extract": 3,
+      "unset_environment": 3,
+      "unmount": 3,
+      "link": 3,
+      "security_status": 3,
+      "format_code": 3,
+      "lint_code": 3,
+      "type_check": 3,
+      "configure": 2,
+      "inspect_jobs": 2,
+      "system_configuration": 2,
+      "install": 2,
+      "combine_columns": 2,
+      "evaluate_command": 2,
+      "shell_parameter": 2,
+      "parse_options": 2,
+      "privileged_edit": 2,
+      "change_capabilities": 2,
+      "audit_report": 2,
+      "filesystem_check": 2,
+      "filesystem_configuration": 2,
+      "raw_io": 2,
+      "change_group": 1,
+      "shell_history": 1,
+      "sync": 1,
+      "decompress": 1,
+      "inspect_users": 1,
+      "join_records": 1,
+      "split_file": 1,
+      "change_priority": 1,
+      "swap_management": 1,
+      "inspect_scheduled_tasks": 1,
+      "delete_scheduled_task": 1,
+      "test": 1,
+      "function_control": 1,
+      "shell_control": 1,
+      "account_lockout": 1,
+      "capability_inspection": 1,
+      "trim": 1,
+      "format": 1,
+      "device_mapper": 1,
+      "detach_job": 1,
+      "repeat_command": 1,
+      "inspect_inventory": 1,
+      "database_restore": 1
+    },
+    "candidate_intents": {
+      "search": 3188,
+      "inspect": 2876,
+      "execute": 1366,
+      "extract": 911,
+      "read": 863,
+      "manage_permissions": 663,
+      "manage_container": 645,
+      "list": 411,
+      "sort": 364,
+      "shell_control": 345,
+      "version_control": 336,
+      "copy": 331,
+      "connect": 324,
+      "manage_package": 270,
+      "transform": 262,
+      "filter": 260,
+      "move": 256,
+      "delete": 221,
+      "transfer": 220,
+      "manage_network": 177,
+      "manage_process": 115,
+      "install": 103,
+      "security_operation": 101,
+      "manage_identity": 86,
+      "uninstall": 81,
+      "manage_service": 77,
+      "manage_database": 74,
+      "manage_cloud": 70,
+      "modify": 55,
+      "configure": 51,
+      "create": 50,
+      "archive": 45,
+      "unknown": 28
+    },
+    "programs": {
+      "find": 2065,
+      "grep": 2003,
+      "git": 958,
+      "kubectl": 610,
+      "cut": 609,
+      "docker": 554,
+      "head": 416,
+      "ls": 409,
+      "chmod": 379,
+      "cat": 375,
+      "sort": 364,
+      "curl": 362,
+      "cp": 331,
+      "echo": 314,
+      "awk": 294,
+      "sed": 291,
+      "mv": 256,
+      "chown": 256,
+      "journalctl": 221,
+      "systemctl": 206,
+      "apt": 202,
+      "ps": 190,
+      "unknown": 151,
+      "rm": 147,
+      "df": 146,
+      "printf": 129,
+      "ip": 127,
+      "du": 124,
+      "export": 98,
+      "env": 89,
+      "rsync": 87,
+      "printenv": 78,
+      "npm": 77,
+      "python3": 76,
+      "apt-cache": 69,
+      "pwd": 67,
+      "tail": 65,
+      "dig": 64,
+      "apt-get": 63,
+      "date": 62,
+      "nc": 54,
+      "gpasswd": 52,
+      "kill": 51,
+      "dpkg": 50,
+      "pgrep": 48,
+      "openssl": 40,
+      "pkill": 39,
+      "ping": 37,
+      "g++": 36,
+      "ansible-playbook": 36,
+      "command": 35,
+      "gcc": 34,
+      "file": 33,
+      "aws": 31,
+      "seq": 30,
+      "getcap": 26,
+      "hostname": 24,
+      "getent": 24,
+      "free": 24,
+      "psql": 24,
+      "node": 24,
+      "basename": 23,
+      "dirname": 23,
+      "ethtool": 23,
+      "getfacl": 23,
+      "gpg": 22,
+      "gcloud": 21,
+      "id": 20,
+      "tar": 19,
+      "mysql": 19,
+      "apt-mark": 19,
+      "lsof": 18,
+      "ssh": 17,
+      "az": 16,
+      "pidof": 15,
+      "scp": 15,
+      "ss": 15,
+      "namei": 15,
+      "fuser": 14,
+      "cd": 13,
+      "mkdir": 13,
+      "test": 13,
+      "killall": 13,
+      "dpkg-query": 13,
+      "dmesg": 12,
+      "groups": 12,
+      "terraform": 12,
+      "clang": 12,
+      "clang++": 12,
+      "npx": 11,
+      "ufw": 11,
+      "gzip": 10,
+      "sqlite3": 10,
+      "uname": 9,
+      "iostat": 9,
+      "host": 9,
+      "firewall-cmd": 9,
+      "python": 8,
+      "lsblk": 8,
+      "whoami": 8
+    },
+    "structures": {
+      "simple_command": 11664,
+      "pipeline": 1911,
+      "compound": 1650
+    },
+    "parser_status": {
+      "collector_bashlex_parsed": 15225
+    },
+    "risk_features": {
+      "external_execution": 14294,
+      "modifies_data": 2329,
+      "destructive": 1402,
+      "network_operation": 912,
+      "security_sensitive": 902,
+      "modifies_permissions": 668,
+      "force": 574,
+      "recursive": 345,
+      "has_shell_control": 214,
+      "privileged": 122
+    },
+    "security_actions": {
+      "destructive_action": 1402,
+      "permission_or_identity_change": 668,
+      "privilege_use": 122,
+      "remote_access_or_transfer": 119,
+      "cryptographic_operation": 69,
+      "credential_or_secret_transport": 3
+    },
+    "risk_heuristic_scores": {
+      "0": 869,
+      "1": 11012,
+      "2": 1677,
+      "3": 161,
+      "4": 651,
+      "5": 189,
+      "6": 14,
+      "7": 1,
+      "8": 641,
+      "9": 4,
+      "10": 2,
+      "12": 2,
+      "13": 2
+    }
+  },
+  "review": {
+    "unmapped_operations": {
+      "unknown": 28
+    },
+    "ambiguous_operations": {
+      "search_and_execute": 602,
+      "modify_or_execute": 318,
+      "delete_or_modify": 122,
+      "unknown": 28,
+      "checksum": 6,
+      "build": 6,
+      "return_status": 5,
+      "partition": 5,
+      "resume_job": 4,
+      "audit_management": 4,
+      "infrastructure_operation": 4,
+      "inspect_system": 3,
+      "lint_code": 3,
+      "type_check": 3,
+      "inspect_jobs": 2,
+      "system_configuration": 2,
+      "security_configuration": 1
+    }
+  },
+  "operation_audit": [
+    {
+      "operation": "search_text",
+      "count": 1743,
+      "domains": {
+        "text_processing": 1743
+      },
+      "operation_details": {
+        "grep": 1743
+      },
+      "detail_candidate_intents": {
+        "search": 1743
+      },
+      "candidate_intent": "search",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect",
+      "count": 1400,
+      "domains": {
+        "version_control": 622,
+        "kubernetes": 386,
+        "container": 133,
+        "service": 117,
+        "filesystem": 108,
+        "package": 34
+      },
+      "operation_details": {
+        "kubectl_get": 353,
+        "git_show": 135,
+        "git_diff": 125,
+        "git_tag": 112,
+        "systemctl_status": 109,
+        "docker_tag": 100,
+        "git_status": 97,
+        "git_log": 87,
+        "git_branch": 38,
+        "file_type": 33,
+        "kubectl_describe": 28,
+        "basename": 23,
+        "dirname": 23,
+        "git_remote": 22,
+        "apt_show": 19,
+        "namei": 15,
+        "apt_list": 14,
+        "docker_inspect": 12,
+        "docker_info": 11,
+        "docker_version": 10,
+        "systemctl_show": 8,
+        "resolve_link": 6,
+        "file_metadata": 5,
+        "git_config": 4,
+        "resolve_path": 3,
+        "kubectl_config": 3,
+        "git_describe": 2,
+        "apt_search": 1,
+        "kubectl_version": 1,
+        "kubectl_diff": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 1400
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "search",
+      "count": 1393,
+      "domains": {
+        "filesystem": 1393
+      },
+      "operation_details": {
+        "filesystem_search": 1352,
+        "attribute_search": 41
+      },
+      "detail_candidate_intents": {
+        "search": 1393
+      },
+      "candidate_intent": "search",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "extract_fields",
+      "count": 903,
+      "domains": {
+        "text_processing": 903
+      },
+      "operation_details": {
+        "cut": 609,
+        "awk": 294
+      },
+      "detail_candidate_intents": {
+        "extract": 903
+      },
+      "candidate_intent": "extract",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "read",
+      "count": 858,
+      "domains": {
+        "filesystem": 858
+      },
+      "operation_details": {
+        "read_head": 416,
+        "file_read": 375,
+        "read_tail": 65,
+        "interactive_file_read": 2
+      },
+      "detail_candidate_intents": {
+        "read": 858
+      },
+      "candidate_intent": "read",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "search_and_execute",
+      "count": 602,
+      "domains": {
+        "filesystem": 602
+      },
+      "operation_details": {
+        "filesystem_search_exec": 602
+      },
+      "detail_candidate_intents": {
+        "execute": 602
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "detail",
+      "review_required": true
+    },
+    {
+      "operation": "list",
+      "count": 411,
+      "domains": {
+        "filesystem": 411
+      },
+      "operation_details": {
+        "list_directory": 409,
+        "list_tree": 2
+      },
+      "detail_candidate_intents": {
+        "list": 411
+      },
+      "candidate_intent": "list",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "change_permissions",
+      "count": 384,
+      "domains": {
+        "permissions": 384
+      },
+      "operation_details": {
+        "chmod": 379,
+        "acl": 5
+      },
+      "detail_candidate_intents": {
+        "manage_permissions": 384
+      },
+      "candidate_intent": "manage_permissions",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "network_request",
+      "count": 367,
+      "domains": {
+        "network": 367
+      },
+      "operation_details": {
+        "http_request": 194,
+        "http_download": 112,
+        "http_post": 15,
+        "http_put": 14,
+        "http_delete": 14,
+        "http_patch": 13,
+        "download": 5
+      },
+      "detail_candidate_intents": {
+        "connect": 250,
+        "transfer": 117
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "sort",
+      "count": 364,
+      "domains": {
+        "text_processing": 364
+      },
+      "operation_details": {
+        "sort": 364
+      },
+      "detail_candidate_intents": {
+        "sort": 364
+      },
+      "candidate_intent": "sort",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "copy",
+      "count": 331,
+      "domains": {
+        "filesystem": 331
+      },
+      "operation_details": {
+        "copy_path": 331
+      },
+      "detail_candidate_intents": {
+        "copy": 331
+      },
+      "candidate_intent": "copy",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "package_management",
+      "count": 323,
+      "domains": {
+        "package": 323
+      },
+      "operation_details": {
+        "apt_install": 80,
+        "dpkg": 50,
+        "apt_remove": 40,
+        "npm": 38,
+        "apt": 23,
+        "apt-get_install": 21,
+        "apt-get_remove": 21,
+        "apt-get_download": 21,
+        "apt_purge": 19,
+        "apt_update": 3,
+        "snap": 2,
+        "flatpak": 2,
+        "apt_autoremove": 1,
+        "apt_upgrade": 1,
+        "apt_full-upgrade": 1
+      },
+      "detail_candidate_intents": {
+        "manage_package": 141,
+        "install": 101,
+        "uninstall": 81
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "modify_or_execute",
+      "count": 318,
+      "domains": {
+        "container": 147,
+        "version_control": 109,
+        "package": 39,
+        "kubernetes": 23
+      },
+      "operation_details": {
+        "docker_run": 85,
+        "docker_exec": 27,
+        "git_push": 21,
+        "npm_install": 19,
+        "git_restore": 16,
+        "git_merge": 15,
+        "git_pull": 14,
+        "git_add": 14,
+        "git_fetch": 14,
+        "kubectl_exec": 14,
+        "docker_start": 12,
+        "docker_restart": 12,
+        "docker_pull": 11,
+        "git_rebase": 10,
+        "npm_run": 10,
+        "npm_update": 9,
+        "kubectl_edit": 7,
+        "git_commit": 4,
+        "kubectl_apply": 2,
+        "git_clone": 1,
+        "npm_exec": 1
+      },
+      "detail_candidate_intents": {
+        "manage_container": 170,
+        "version_control": 109,
+        "manage_package": 28,
+        "execute": 11
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "output",
+      "count": 314,
+      "domains": {
+        "shell": 314
+      },
+      "operation_details": {
+        "echo": 314
+      },
+      "detail_candidate_intents": {
+        "execute": 314
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_usage",
+      "count": 270,
+      "domains": {
+        "disk_storage": 270
+      },
+      "operation_details": {
+        "filesystem_usage": 146,
+        "directory_usage": 124
+      },
+      "detail_candidate_intents": {
+        "inspect": 270
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "filter_text",
+      "count": 260,
+      "domains": {
+        "text_processing": 260
+      },
+      "operation_details": {
+        "inverse_text_filter": 260
+      },
+      "detail_candidate_intents": {
+        "filter": 260
+      },
+      "candidate_intent": "filter",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "container_operation",
+      "count": 260,
+      "domains": {
+        "container": 260
+      },
+      "operation_details": {
+        "docker": 260
+      },
+      "detail_candidate_intents": {
+        "manage_container": 260
+      },
+      "candidate_intent": "manage_container",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "move",
+      "count": 256,
+      "domains": {
+        "filesystem": 256
+      },
+      "operation_details": {
+        "move_path": 256
+      },
+      "detail_candidate_intents": {
+        "move": 256
+      },
+      "candidate_intent": "move",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "change_owner",
+      "count": 256,
+      "domains": {
+        "permissions": 256
+      },
+      "operation_details": {
+        "chown": 256
+      },
+      "detail_candidate_intents": {
+        "manage_permissions": 256
+      },
+      "candidate_intent": "manage_permissions",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "transform_text",
+      "count": 245,
+      "domains": {
+        "text_processing": 245
+      },
+      "operation_details": {
+        "sed": 177,
+        "substitution": 66,
+        "tr": 2
+      },
+      "detail_candidate_intents": {
+        "transform": 245
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_logs",
+      "count": 233,
+      "domains": {
+        "system_logging": 233
+      },
+      "operation_details": {
+        "journal_logs": 221,
+        "kernel_logs": 12
+      },
+      "detail_candidate_intents": {
+        "inspect": 233
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "delete",
+      "count": 220,
+      "domains": {
+        "filesystem": 220
+      },
+      "operation_details": {
+        "remove_path": 147,
+        "filesystem_search_delete": 71,
+        "remove_directory": 2
+      },
+      "detail_candidate_intents": {
+        "delete": 220
+      },
+      "candidate_intent": "delete",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_processes",
+      "count": 207,
+      "domains": {
+        "process": 207
+      },
+      "operation_details": {
+        "process_list": 190,
+        "process_pid_lookup": 15,
+        "interactive_process_monitor": 2
+      },
+      "detail_candidate_intents": {
+        "inspect": 207
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "kubernetes_operation",
+      "count": 173,
+      "domains": {
+        "kubernetes": 173
+      },
+      "operation_details": {
+        "kubectl": 173
+      },
+      "detail_candidate_intents": {
+        "manage_container": 173
+      },
+      "candidate_intent": "manage_container",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_environment",
+      "count": 167,
+      "domains": {
+        "shell": 167
+      },
+      "operation_details": {
+        "env": 89,
+        "print_environment": 78
+      },
+      "detail_candidate_intents": {
+        "inspect": 167
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "version_control",
+      "count": 147,
+      "domains": {
+        "version_control": 147
+      },
+      "operation_details": {
+        "git": 147
+      },
+      "detail_candidate_intents": {
+        "version_control": 147
+      },
+      "candidate_intent": "version_control",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "network_configuration",
+      "count": 143,
+      "domains": {
+        "network": 143
+      },
+      "operation_details": {
+        "ip_tool": 127,
+        "network_manager_cli": 8,
+        "systemd_networkctl": 3,
+        "route": 2,
+        "arp": 2,
+        "network_manager_tui": 1
+      },
+      "detail_candidate_intents": {
+        "manage_network": 143
+      },
+      "candidate_intent": "manage_network",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "control_structure",
+      "count": 142,
+      "domains": {
+        "shell": 142
+      },
+      "operation_details": {
+        "shell_control_structure": 142
+      },
+      "detail_candidate_intents": {
+        "shell_control": 142
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "formatted_output",
+      "count": 129,
+      "domains": {
+        "shell": 129
+      },
+      "operation_details": {
+        "printf": 129
+      },
+      "detail_candidate_intents": {
+        "execute": 129
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "delete_or_modify",
+      "count": 122,
+      "domains": {
+        "version_control": 80,
+        "kubernetes": 28,
+        "container": 14
+      },
+      "operation_details": {
+        "git_reset": 80,
+        "kubectl_delete": 28,
+        "docker_stop": 12,
+        "docker_rm": 1,
+        "docker_rmi": 1
+      },
+      "detail_candidate_intents": {
+        "version_control": 80,
+        "manage_container": 42
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "execute_program",
+      "count": 110,
+      "domains": {
+        "development": 110
+      },
+      "operation_details": {
+        "python": 84,
+        "node": 24,
+        "ruby": 1,
+        "php": 1
+      },
+      "detail_candidate_intents": {
+        "execute": 110
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "terminate_process",
+      "count": 103,
+      "domains": {
+        "process": 103
+      },
+      "operation_details": {
+        "signal_processes": 52,
+        "signal_process": 51
+      },
+      "detail_candidate_intents": {
+        "manage_process": 103
+      },
+      "candidate_intent": "manage_process",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_system",
+      "count": 103,
+      "domains": {
+        "system": 103
+      },
+      "operation_details": {
+        "date": 62,
+        "hostname": 24,
+        "uname": 9,
+        "hostnamectl": 3,
+        "systemd_analysis": 3,
+        "uptime": 2
+      },
+      "detail_candidate_intents": {
+        "inspect": 100,
+        "configure": 3
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "file_transfer",
+      "count": 102,
+      "domains": {
+        "network": 102
+      },
+      "operation_details": {
+        "synchronization": 87,
+        "secure_copy": 15
+      },
+      "detail_candidate_intents": {
+        "transfer": 102
+      },
+      "candidate_intent": "transfer",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "set_environment",
+      "count": 98,
+      "domains": {
+        "shell": 98
+      },
+      "operation_details": {
+        "export": 98
+      },
+      "detail_candidate_intents": {
+        "shell_control": 98
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "manage_service",
+      "count": 97,
+      "domains": {
+        "service": 97
+      },
+      "operation_details": {
+        "service_manager": 38,
+        "systemctl_restart": 9,
+        "systemctl_enable": 9,
+        "systemctl_start": 8,
+        "systemctl_stop": 8,
+        "systemctl_reload": 8,
+        "systemctl_disable": 8,
+        "loginctl": 4,
+        "systemctl_reset-failed": 2,
+        "systemctl_daemon-reload": 1,
+        "systemctl_mask": 1,
+        "systemctl_unmask": 1
+      },
+      "detail_candidate_intents": {
+        "manage_service": 77,
+        "configure": 20
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "compile",
+      "count": 94,
+      "domains": {
+        "development": 94
+      },
+      "operation_details": {
+        "g++": 36,
+        "gcc": 34,
+        "clang": 12,
+        "clang++": 12
+      },
+      "detail_candidate_intents": {
+        "execute": 94
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_package",
+      "count": 82,
+      "domains": {
+        "package": 82
+      },
+      "operation_details": {
+        "apt_cache": 69,
+        "dpkg_query": 13
+      },
+      "detail_candidate_intents": {
+        "manage_package": 82
+      },
+      "candidate_intent": "manage_package",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_resources",
+      "count": 80,
+      "domains": {
+        "system": 48,
+        "process": 32
+      },
+      "operation_details": {
+        "memory": 24,
+        "open_files": 18,
+        "resource_users": 14,
+        "io_statistics": 9,
+        "cpu_statistics": 7,
+        "cpu_information": 3,
+        "virtual_memory_statistics": 3,
+        "memory_layout": 2
+      },
+      "detail_candidate_intents": {
+        "inspect": 80
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "dns_lookup",
+      "count": 78,
+      "domains": {
+        "network": 78
+      },
+      "operation_details": {
+        "dns_query": 78
+      },
+      "detail_candidate_intents": {
+        "inspect": 78
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "cloud_operation",
+      "count": 68,
+      "domains": {
+        "cloud": 68
+      },
+      "operation_details": {
+        "aws_s3": 19,
+        "gcloud_compute": 17,
+        "az_vm": 13,
+        "aws_ec2": 7,
+        "aws_iam": 2,
+        "az_account": 2,
+        "aws_sts": 1,
+        "aws_configure": 1,
+        "aws_logs": 1,
+        "gcloud_auth": 1,
+        "gcloud_config": 1,
+        "gcloud_projects": 1,
+        "gcloud_storage": 1,
+        "az_group": 1
+      },
+      "detail_candidate_intents": {
+        "manage_cloud": 68
+      },
+      "candidate_intent": "manage_cloud",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_location",
+      "count": 67,
+      "domains": {
+        "shell": 67
+      },
+      "operation_details": {
+        "print_current_directory": 67
+      },
+      "detail_candidate_intents": {
+        "inspect": 67
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "database_operation",
+      "count": 62,
+      "domains": {
+        "database": 62
+      },
+      "operation_details": {
+        "postgresql": 24,
+        "mysql": 19,
+        "sqlite3": 10,
+        "mongodb": 5,
+        "redis": 4
+      },
+      "detail_candidate_intents": {
+        "manage_database": 62
+      },
+      "candidate_intent": "manage_database",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "cryptographic_operation",
+      "count": 62,
+      "domains": {
+        "security": 62
+      },
+      "operation_details": {
+        "openssl": 40,
+        "gpg": 22
+      },
+      "detail_candidate_intents": {
+        "security_operation": 62
+      },
+      "candidate_intent": "security_operation",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "network_connection",
+      "count": 57,
+      "domains": {
+        "network": 57
+      },
+      "operation_details": {
+        "netcat": 55,
+        "socat": 2
+      },
+      "detail_candidate_intents": {
+        "connect": 57
+      },
+      "candidate_intent": "connect",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "manage_group",
+      "count": 55,
+      "domains": {
+        "user_account": 55
+      },
+      "operation_details": {
+        "group_password": 52,
+        "create_group": 2,
+        "delete_group": 1
+      },
+      "detail_candidate_intents": {
+        "manage_identity": 55
+      },
+      "candidate_intent": "manage_identity",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "search_processes",
+      "count": 48,
+      "domains": {
+        "process": 48
+      },
+      "operation_details": {
+        "process_search": 48
+      },
+      "detail_candidate_intents": {
+        "search": 48
+      },
+      "candidate_intent": "search",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "modify_text",
+      "count": 48,
+      "domains": {
+        "text_processing": 48
+      },
+      "operation_details": {
+        "in_place_edit": 48
+      },
+      "detail_candidate_intents": {
+        "modify": 48
+      },
+      "candidate_intent": "modify",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_command",
+      "count": 42,
+      "domains": {
+        "shell": 42
+      },
+      "operation_details": {
+        "command_builtin": 30,
+        "command_lookup": 8,
+        "type_builtin": 3,
+        "whereis": 1
+      },
+      "detail_candidate_intents": {
+        "shell_control": 30,
+        "inspect": 12
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "configuration_automation",
+      "count": 39,
+      "domains": {
+        "automation": 39
+      },
+      "operation_details": {
+        "ansible_playbook": 36,
+        "ansible": 3
+      },
+      "detail_candidate_intents": {
+        "execute": 39
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "connectivity_test",
+      "count": 37,
+      "domains": {
+        "network": 37
+      },
+      "operation_details": {
+        "icmp_probe": 37
+      },
+      "detail_candidate_intents": {
+        "inspect": 37
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "build",
+      "count": 35,
+      "domains": {
+        "development": 35
+      },
+      "operation_details": {
+        "make": 6,
+        "cargo": 6,
+        "go": 6,
+        "maven": 5,
+        "cmake": 4,
+        "gradle": 4,
+        "dotnet": 4
+      },
+      "detail_candidate_intents": {
+        "execute": 35
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "manage_user",
+      "count": 30,
+      "domains": {
+        "user_account": 30
+      },
+      "operation_details": {
+        "password_change": 8,
+        "account_aging": 8,
+        "modify_user": 7,
+        "create_user": 5,
+        "delete_user": 2
+      },
+      "detail_candidate_intents": {
+        "manage_identity": 30
+      },
+      "candidate_intent": "manage_identity",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "firewall_management",
+      "count": 30,
+      "domains": {
+        "security": 30
+      },
+      "operation_details": {
+        "ufw": 11,
+        "firewalld": 9,
+        "iptables": 5,
+        "nftables": 4,
+        "ip6tables": 1
+      },
+      "detail_candidate_intents": {
+        "manage_network": 30
+      },
+      "candidate_intent": "manage_network",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "generate_sequence",
+      "count": 30,
+      "domains": {
+        "text_processing": 30
+      },
+      "operation_details": {
+        "seq": 30
+      },
+      "detail_candidate_intents": {
+        "create": 30
+      },
+      "candidate_intent": "create",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "checksum",
+      "count": 29,
+      "domains": {
+        "security": 29
+      },
+      "operation_details": {
+        "sha256": 7,
+        "md5": 6,
+        "cksum": 6,
+        "sha512": 5,
+        "sha1": 5
+      },
+      "detail_candidate_intents": {
+        "security_operation": 23,
+        "inspect": 6
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "unknown",
+      "count": 28,
+      "domains": {
+        "other": 28
+      },
+      "operation_details": {
+        "command1": 4,
+        "./worker": 4,
+        "./server.sh": 2,
+        "greet": 2,
+        "./backup.sh": 2,
+        "./app": 1,
+        "long_running_command": 1,
+        "backup": 1,
+        "declare": 1,
+        "readonly": 1,
+        "bash": 1,
+        "backup_file": 1,
+        "count_lines": 1,
+        "show_status": 1,
+        "count_errors": 1,
+        "show_logs": 1,
+        "get_processes": 1,
+        "lastb": 1,
+        "./configure": 1
+      },
+      "detail_candidate_intents": {
+        "unknown": 28
+      },
+      "candidate_intent": "unknown",
+      "mapping_source": "unmapped",
+      "review_required": true
+    },
+    {
+      "operation": "inspect_identity",
+      "count": 28,
+      "domains": {
+        "user_account": 28
+      },
+      "operation_details": {
+        "id": 20,
+        "whoami": 8
+      },
+      "detail_candidate_intents": {
+        "inspect": 28
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "archive",
+      "count": 27,
+      "domains": {
+        "archive_compression": 27
+      },
+      "operation_details": {
+        "tar": 19,
+        "zip": 5,
+        "7zip": 3
+      },
+      "detail_candidate_intents": {
+        "archive": 27
+      },
+      "candidate_intent": "archive",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_capabilities",
+      "count": 26,
+      "domains": {
+        "permissions": 26
+      },
+      "operation_details": {
+        "file_capabilities": 26
+      },
+      "detail_candidate_intents": {
+        "inspect": 26
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "identity_lookup",
+      "count": 24,
+      "domains": {
+        "system": 24
+      },
+      "operation_details": {
+        "getent": 24
+      },
+      "detail_candidate_intents": {
+        "inspect": 24
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_interface",
+      "count": 23,
+      "domains": {
+        "network": 23
+      },
+      "operation_details": {
+        "ethernet_tool": 23
+      },
+      "detail_candidate_intents": {
+        "inspect": 23
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_permissions",
+      "count": 23,
+      "domains": {
+        "permissions": 23
+      },
+      "operation_details": {
+        "acl": 23
+      },
+      "detail_candidate_intents": {
+        "manage_permissions": 23
+      },
+      "candidate_intent": "manage_permissions",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "conditional_test",
+      "count": 19,
+      "domains": {
+        "shell": 19
+      },
+      "operation_details": {
+        "test": 13,
+        "test_builtin": 6
+      },
+      "detail_candidate_intents": {
+        "shell_control": 19
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "manage_package_state",
+      "count": 19,
+      "domains": {
+        "package": 19
+      },
+      "operation_details": {
+        "apt_mark": 19
+      },
+      "detail_candidate_intents": {
+        "manage_package": 19
+      },
+      "candidate_intent": "manage_package",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "remote_access",
+      "count": 18,
+      "domains": {
+        "network": 18
+      },
+      "operation_details": {
+        "secure_shell": 17,
+        "sftp": 1
+      },
+      "detail_candidate_intents": {
+        "connect": 17,
+        "transfer": 1
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "create",
+      "count": 17,
+      "domains": {
+        "filesystem": 17
+      },
+      "operation_details": {
+        "create_directory": 13,
+        "create_file": 4
+      },
+      "detail_candidate_intents": {
+        "create": 17
+      },
+      "candidate_intent": "create",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_connections",
+      "count": 17,
+      "domains": {
+        "network": 17
+      },
+      "operation_details": {
+        "socket_statistics": 15,
+        "network_statistics": 2
+      },
+      "detail_candidate_intents": {
+        "inspect": 17
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "compress",
+      "count": 17,
+      "domains": {
+        "archive_compression": 17
+      },
+      "operation_details": {
+        "gzip": 10,
+        "bzip2": 5,
+        "xz": 1,
+        "zstd": 1
+      },
+      "detail_candidate_intents": {
+        "archive": 17
+      },
+      "candidate_intent": "archive",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "key_management",
+      "count": 14,
+      "domains": {
+        "security": 14
+      },
+      "operation_details": {
+        "ssh_keygen": 7,
+        "ssh_agent": 4,
+        "ssh_host_key_scan": 3
+      },
+      "detail_candidate_intents": {
+        "security_operation": 14
+      },
+      "candidate_intent": "security_operation",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "change_directory",
+      "count": 13,
+      "domains": {
+        "filesystem": 13
+      },
+      "operation_details": {
+        "change_working_directory": 13
+      },
+      "detail_candidate_intents": {
+        "shell_control": 13
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_devices",
+      "count": 13,
+      "domains": {
+        "disk_storage": 9,
+        "system": 4
+      },
+      "operation_details": {
+        "block_devices": 8,
+        "usb_devices": 2,
+        "pci_devices": 2,
+        "filesystem_identity": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 13
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_groups",
+      "count": 12,
+      "domains": {
+        "user_account": 12
+      },
+      "operation_details": {
+        "groups": 12
+      },
+      "detail_candidate_intents": {
+        "inspect": 12
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_login_history",
+      "count": 12,
+      "domains": {
+        "user_account": 12
+      },
+      "operation_details": {
+        "lastlog": 8,
+        "last": 4
+      },
+      "detail_candidate_intents": {
+        "inspect": 12
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "infrastructure_operation",
+      "count": 12,
+      "domains": {
+        "development": 12
+      },
+      "operation_details": {
+        "terraform_state": 2,
+        "terraform_workspace": 2,
+        "terraform_init": 1,
+        "terraform_validate": 1,
+        "terraform_fmt": 1,
+        "terraform_plan": 1,
+        "terraform_apply": 1,
+        "terraform_destroy": 1,
+        "terraform_output": 1,
+        "terraform_show": 1
+      },
+      "detail_candidate_intents": {
+        "execute": 4,
+        "inspect": 3,
+        "manage_cloud": 2,
+        "configure": 1,
+        "transform": 1,
+        "read": 1
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "shell_configuration",
+      "count": 11,
+      "domains": {
+        "shell": 11
+      },
+      "operation_details": {
+        "set": 7,
+        "alias": 2,
+        "unalias": 1,
+        "builtin": 1
+      },
+      "detail_candidate_intents": {
+        "shell_control": 11
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "execute_package_binary",
+      "count": 11,
+      "domains": {
+        "development": 11
+      },
+      "operation_details": {
+        "npx": 11
+      },
+      "detail_candidate_intents": {
+        "execute": 11
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "database_backup",
+      "count": 11,
+      "domains": {
+        "database": 11
+      },
+      "operation_details": {
+        "postgres_dump": 7,
+        "mysql_dump": 4
+      },
+      "detail_candidate_intents": {
+        "manage_database": 11
+      },
+      "candidate_intent": "manage_database",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "route_diagnostic",
+      "count": 10,
+      "domains": {
+        "network": 10
+      },
+      "operation_details": {
+        "mtr": 8,
+        "traceroute": 1,
+        "tracepath": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 10
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "set_variable",
+      "count": 9,
+      "domains": {
+        "shell": 9
+      },
+      "operation_details": {
+        "shell_variable_assignment": 9
+      },
+      "detail_candidate_intents": {
+        "shell_control": 9
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "mount",
+      "count": 7,
+      "domains": {
+        "disk_storage": 7
+      },
+      "operation_details": {
+        "mount_filesystem": 7
+      },
+      "detail_candidate_intents": {
+        "configure": 7
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "compare",
+      "count": 7,
+      "domains": {
+        "text_processing": 7
+      },
+      "operation_details": {
+        "diff": 4,
+        "comm": 2,
+        "cmp": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 7
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_storage",
+      "count": 7,
+      "domains": {
+        "disk_storage": 7
+      },
+      "operation_details": {
+        "lvm_physical_volume": 1,
+        "lvm_volume_group": 1,
+        "lvm_logical_volume": 1,
+        "lvm_physical_volumes": 1,
+        "lvm_volume_groups": 1,
+        "lvm_logical_volumes": 1,
+        "lvm_scan": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 7
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "security_configuration",
+      "count": 6,
+      "domains": {
+        "security": 6
+      },
+      "operation_details": {
+        "selinux_mode": 4,
+        "selinux_policy": 1,
+        "apparmor_parser": 1
+      },
+      "detail_candidate_intents": {
+        "configure": 5,
+        "inspect": 1
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "packet_capture",
+      "count": 6,
+      "domains": {
+        "network": 6
+      },
+      "operation_details": {
+        "tcpdump": 6
+      },
+      "detail_candidate_intents": {
+        "inspect": 6
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "count",
+      "count": 5,
+      "domains": {
+        "text_processing": 5
+      },
+      "operation_details": {
+        "word_count": 5
+      },
+      "detail_candidate_intents": {
+        "extract": 5
+      },
+      "candidate_intent": "extract",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "source_script",
+      "count": 5,
+      "domains": {
+        "shell": 5
+      },
+      "operation_details": {
+        "source": 5
+      },
+      "detail_candidate_intents": {
+        "execute": 5
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_sessions",
+      "count": 5,
+      "domains": {
+        "user_account": 5
+      },
+      "operation_details": {
+        "who": 3,
+        "w": 2
+      },
+      "detail_candidate_intents": {
+        "inspect": 5
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "return_status",
+      "count": 5,
+      "domains": {
+        "shell": 5
+      },
+      "operation_details": {
+        "true": 3,
+        "false": 2
+      },
+      "detail_candidate_intents": {
+        "shell_control": 5
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "transform_json",
+      "count": 5,
+      "domains": {
+        "text_processing": 5
+      },
+      "operation_details": {
+        "jq": 5
+      },
+      "detail_candidate_intents": {
+        "transform": 5
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "partition",
+      "count": 5,
+      "domains": {
+        "disk_storage": 5
+      },
+      "operation_details": {
+        "fdisk": 2,
+        "parted": 2,
+        "partprobe": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 5
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "resume_job",
+      "count": 4,
+      "domains": {
+        "process": 4
+      },
+      "operation_details": {
+        "foreground_job": 2,
+        "background_job": 2
+      },
+      "detail_candidate_intents": {
+        "manage_process": 4
+      },
+      "candidate_intent": "manage_process",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "inspect_mounts",
+      "count": 4,
+      "domains": {
+        "disk_storage": 4
+      },
+      "operation_details": {
+        "mount_information": 4
+      },
+      "detail_candidate_intents": {
+        "inspect": 4
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "privilege_wrapper",
+      "count": 4,
+      "domains": {
+        "security": 4
+      },
+      "operation_details": {
+        "sudo": 4
+      },
+      "detail_candidate_intents": {
+        "execute": 4
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "read_input",
+      "count": 4,
+      "domains": {
+        "shell": 4
+      },
+      "operation_details": {
+        "read": 3,
+        "mapfile": 1
+      },
+      "detail_candidate_intents": {
+        "read": 4
+      },
+      "candidate_intent": "read",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "replace_process",
+      "count": 4,
+      "domains": {
+        "shell": 4
+      },
+      "operation_details": {
+        "exec": 4
+      },
+      "detail_candidate_intents": {
+        "manage_process": 4
+      },
+      "candidate_intent": "manage_process",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "schedule_task",
+      "count": 4,
+      "domains": {
+        "automation": 4
+      },
+      "operation_details": {
+        "cron": 3,
+        "at": 1
+      },
+      "detail_candidate_intents": {
+        "configure": 4
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "audit_management",
+      "count": 4,
+      "domains": {
+        "security": 4
+      },
+      "operation_details": {
+        "auditctl": 3,
+        "auditd": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 4
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "audit_search",
+      "count": 4,
+      "domains": {
+        "security": 4
+      },
+      "operation_details": {
+        "audit_logs": 4
+      },
+      "detail_candidate_intents": {
+        "search": 4
+      },
+      "candidate_intent": "search",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "dns_configuration",
+      "count": 4,
+      "domains": {
+        "network": 4
+      },
+      "operation_details": {
+        "systemd_resolved": 4
+      },
+      "detail_candidate_intents": {
+        "manage_network": 4
+      },
+      "candidate_intent": "manage_network",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "signal_handler",
+      "count": 4,
+      "domains": {
+        "shell": 4
+      },
+      "operation_details": {
+        "trap": 4
+      },
+      "detail_candidate_intents": {
+        "shell_control": 4
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "deduplicate",
+      "count": 3,
+      "domains": {
+        "text_processing": 3
+      },
+      "operation_details": {
+        "uniq": 3
+      },
+      "detail_candidate_intents": {
+        "transform": 3
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "wait",
+      "count": 3,
+      "domains": {
+        "system": 2,
+        "process": 1
+      },
+      "operation_details": {
+        "sleep": 2,
+        "wait_for_process": 1
+      },
+      "detail_candidate_intents": {
+        "shell_control": 2,
+        "manage_process": 1
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "extract",
+      "count": 3,
+      "domains": {
+        "archive_compression": 3
+      },
+      "operation_details": {
+        "unzip": 3
+      },
+      "detail_candidate_intents": {
+        "extract": 3
+      },
+      "candidate_intent": "extract",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "unset_environment",
+      "count": 3,
+      "domains": {
+        "shell": 3
+      },
+      "operation_details": {
+        "unset": 3
+      },
+      "detail_candidate_intents": {
+        "shell_control": 3
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "unmount",
+      "count": 3,
+      "domains": {
+        "disk_storage": 3
+      },
+      "operation_details": {
+        "unmount_filesystem": 3
+      },
+      "detail_candidate_intents": {
+        "configure": 3
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "link",
+      "count": 3,
+      "domains": {
+        "filesystem": 3
+      },
+      "operation_details": {
+        "create_link": 3
+      },
+      "detail_candidate_intents": {
+        "create": 3
+      },
+      "candidate_intent": "create",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "security_status",
+      "count": 3,
+      "domains": {
+        "security": 3
+      },
+      "operation_details": {
+        "apparmor": 2,
+        "selinux_status": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 3
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "format_code",
+      "count": 3,
+      "domains": {
+        "development": 3
+      },
+      "operation_details": {
+        "black": 3
+      },
+      "detail_candidate_intents": {
+        "transform": 3
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "lint_code",
+      "count": 3,
+      "domains": {
+        "development": 3
+      },
+      "operation_details": {
+        "flake8": 3
+      },
+      "detail_candidate_intents": {
+        "execute": 3
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "type_check",
+      "count": 3,
+      "domains": {
+        "development": 3
+      },
+      "operation_details": {
+        "mypy": 3
+      },
+      "detail_candidate_intents": {
+        "execute": 3
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "configure",
+      "count": 2,
+      "domains": {
+        "permissions": 2
+      },
+      "operation_details": {
+        "umask": 2
+      },
+      "detail_candidate_intents": {
+        "configure": 2
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_jobs",
+      "count": 2,
+      "domains": {
+        "process": 2
+      },
+      "operation_details": {
+        "shell_jobs": 2
+      },
+      "detail_candidate_intents": {
+        "manage_process": 2
+      },
+      "candidate_intent": "manage_process",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "system_configuration",
+      "count": 2,
+      "domains": {
+        "system": 2
+      },
+      "operation_details": {
+        "time_configuration": 2
+      },
+      "detail_candidate_intents": {
+        "inspect": 2
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "domain_fallback",
+      "review_required": true
+    },
+    {
+      "operation": "install",
+      "count": 2,
+      "domains": {
+        "filesystem": 2
+      },
+      "operation_details": {
+        "install_program": 2
+      },
+      "detail_candidate_intents": {
+        "install": 2
+      },
+      "candidate_intent": "install",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "combine_columns",
+      "count": 2,
+      "domains": {
+        "text_processing": 2
+      },
+      "operation_details": {
+        "paste": 2
+      },
+      "detail_candidate_intents": {
+        "transform": 2
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "evaluate_command",
+      "count": 2,
+      "domains": {
+        "shell": 2
+      },
+      "operation_details": {
+        "eval": 2
+      },
+      "detail_candidate_intents": {
+        "shell_control": 2
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "shell_parameter",
+      "count": 2,
+      "domains": {
+        "shell": 2
+      },
+      "operation_details": {
+        "shift": 2
+      },
+      "detail_candidate_intents": {
+        "shell_control": 2
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "parse_options",
+      "count": 2,
+      "domains": {
+        "shell": 2
+      },
+      "operation_details": {
+        "getopts": 2
+      },
+      "detail_candidate_intents": {
+        "shell_control": 2
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "privileged_edit",
+      "count": 2,
+      "domains": {
+        "security": 2
+      },
+      "operation_details": {
+        "sudoedit": 1,
+        "sudoers_validation": 1
+      },
+      "detail_candidate_intents": {
+        "modify": 1,
+        "security_operation": 1
+      },
+      "candidate_intent": "ambiguous",
+      "mapping_source": "mixed_details",
+      "review_required": true
+    },
+    {
+      "operation": "change_capabilities",
+      "count": 2,
+      "domains": {
+        "permissions": 2
+      },
+      "operation_details": {
+        "file_capabilities": 2
+      },
+      "detail_candidate_intents": {
+        "modify": 2
+      },
+      "candidate_intent": "modify",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "audit_report",
+      "count": 2,
+      "domains": {
+        "security": 2
+      },
+      "operation_details": {
+        "aureport": 2
+      },
+      "detail_candidate_intents": {
+        "inspect": 2
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "filesystem_check",
+      "count": 2,
+      "domains": {
+        "disk_storage": 2
+      },
+      "operation_details": {
+        "fsck": 1,
+        "e2fsck": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 2
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "filesystem_configuration",
+      "count": 2,
+      "domains": {
+        "disk_storage": 2
+      },
+      "operation_details": {
+        "tune2fs": 1,
+        "resize2fs": 1
+      },
+      "detail_candidate_intents": {
+        "configure": 2
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "raw_io",
+      "count": 2,
+      "domains": {
+        "disk_storage": 2
+      },
+      "operation_details": {
+        "block_copy": 2
+      },
+      "detail_candidate_intents": {
+        "modify": 2
+      },
+      "candidate_intent": "modify",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "change_group",
+      "count": 1,
+      "domains": {
+        "permissions": 1
+      },
+      "operation_details": {
+        "chgrp": 1
+      },
+      "detail_candidate_intents": {
+        "modify": 1
+      },
+      "candidate_intent": "modify",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "shell_history",
+      "count": 1,
+      "domains": {
+        "shell": 1
+      },
+      "operation_details": {
+        "history": 1
+      },
+      "detail_candidate_intents": {
+        "shell_control": 1
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "sync",
+      "count": 1,
+      "domains": {
+        "disk_storage": 1
+      },
+      "operation_details": {
+        "flush_filesystem_buffers": 1
+      },
+      "detail_candidate_intents": {
+        "configure": 1
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "decompress",
+      "count": 1,
+      "domains": {
+        "archive_compression": 1
+      },
+      "operation_details": {
+        "gzip": 1
+      },
+      "detail_candidate_intents": {
+        "archive": 1
+      },
+      "candidate_intent": "archive",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_users",
+      "count": 1,
+      "domains": {
+        "user_account": 1
+      },
+      "operation_details": {
+        "logged_in_users": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 1
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "join_records",
+      "count": 1,
+      "domains": {
+        "text_processing": 1
+      },
+      "operation_details": {
+        "join": 1
+      },
+      "detail_candidate_intents": {
+        "transform": 1
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "split_file",
+      "count": 1,
+      "domains": {
+        "filesystem": 1
+      },
+      "operation_details": {
+        "split": 1
+      },
+      "detail_candidate_intents": {
+        "transform": 1
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "change_priority",
+      "count": 1,
+      "domains": {
+        "process": 1
+      },
+      "operation_details": {
+        "renice": 1
+      },
+      "detail_candidate_intents": {
+        "modify": 1
+      },
+      "candidate_intent": "modify",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "swap_management",
+      "count": 1,
+      "domains": {
+        "disk_storage": 1
+      },
+      "operation_details": {
+        "swapon": 1
+      },
+      "detail_candidate_intents": {
+        "configure": 1
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_scheduled_tasks",
+      "count": 1,
+      "domains": {
+        "automation": 1
+      },
+      "operation_details": {
+        "atq": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 1
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "delete_scheduled_task",
+      "count": 1,
+      "domains": {
+        "automation": 1
+      },
+      "operation_details": {
+        "atrm": 1
+      },
+      "detail_candidate_intents": {
+        "delete": 1
+      },
+      "candidate_intent": "delete",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "test",
+      "count": 1,
+      "domains": {
+        "development": 1
+      },
+      "operation_details": {
+        "ctest": 1
+      },
+      "detail_candidate_intents": {
+        "execute": 1
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "function_control",
+      "count": 1,
+      "domains": {
+        "shell": 1
+      },
+      "operation_details": {
+        "return": 1
+      },
+      "detail_candidate_intents": {
+        "shell_control": 1
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "shell_control",
+      "count": 1,
+      "domains": {
+        "shell": 1
+      },
+      "operation_details": {
+        "exit": 1
+      },
+      "detail_candidate_intents": {
+        "shell_control": 1
+      },
+      "candidate_intent": "shell_control",
+      "mapping_source": "exact",
+      "review_required": false
+    },
+    {
+      "operation": "account_lockout",
+      "count": 1,
+      "domains": {
+        "security": 1
+      },
+      "operation_details": {
+        "faillock": 1
+      },
+      "detail_candidate_intents": {
+        "manage_identity": 1
+      },
+      "candidate_intent": "manage_identity",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "capability_inspection",
+      "count": 1,
+      "domains": {
+        "security": 1
+      },
+      "operation_details": {
+        "capsh": 1
+      },
+      "detail_candidate_intents": {
+        "security_operation": 1
+      },
+      "candidate_intent": "security_operation",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "trim",
+      "count": 1,
+      "domains": {
+        "disk_storage": 1
+      },
+      "operation_details": {
+        "discard_unused_blocks": 1
+      },
+      "detail_candidate_intents": {
+        "configure": 1
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "format",
+      "count": 1,
+      "domains": {
+        "disk_storage": 1
+      },
+      "operation_details": {
+        "filesystem_format": 1
+      },
+      "detail_candidate_intents": {
+        "transform": 1
+      },
+      "candidate_intent": "transform",
+      "mapping_source": "lexical",
+      "review_required": false
+    },
+    {
+      "operation": "device_mapper",
+      "count": 1,
+      "domains": {
+        "disk_storage": 1
+      },
+      "operation_details": {
+        "dmsetup": 1
+      },
+      "detail_candidate_intents": {
+        "configure": 1
+      },
+      "candidate_intent": "configure",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "detach_job",
+      "count": 1,
+      "domains": {
+        "process": 1
+      },
+      "operation_details": {
+        "detach_shell_job": 1
+      },
+      "detail_candidate_intents": {
+        "manage_process": 1
+      },
+      "candidate_intent": "manage_process",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "repeat_command",
+      "count": 1,
+      "domains": {
+        "automation": 1
+      },
+      "operation_details": {
+        "watch": 1
+      },
+      "detail_candidate_intents": {
+        "execute": 1
+      },
+      "candidate_intent": "execute",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "inspect_inventory",
+      "count": 1,
+      "domains": {
+        "automation": 1
+      },
+      "operation_details": {
+        "ansible_inventory": 1
+      },
+      "detail_candidate_intents": {
+        "inspect": 1
+      },
+      "candidate_intent": "inspect",
+      "mapping_source": "detail",
+      "review_required": false
+    },
+    {
+      "operation": "database_restore",
+      "count": 1,
+      "domains": {
+        "database": 1
+      },
+      "operation_details": {
+        "postgres_restore": 1
+      },
+      "detail_candidate_intents": {
+        "manage_database": 1
+      },
+      "candidate_intent": "manage_database",
+      "mapping_source": "exact",
+      "review_required": false
+    }
+  ]
+}
