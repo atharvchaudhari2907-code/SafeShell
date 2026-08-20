@@ -1,0 +1,132 @@
+========================================================================
+SafeShell Ontology Audit V4
+========================================================================
+Input                   : /home/paras/Desktop/SafeShell/data/enriched/enriched_commands_v11.jsonl
+Records                 : 15225
+Malformed               : 0
+Duplicate IDs           : 0
+Unique programs         : 301
+Unique domains          : 22
+Unique operations       : 148
+Unique operation_details: 401
+Intent labels           : 35
+Risk labels             : 5
+Intent mode             : MULTI-LABEL
+Resolved rows           : 15225
+Unknown rows            : 0
+
+Intent distribution (record-level label occurrences):
+  search                       3789
+  inspect                      3154
+  execute                      921
+  extract                      906
+  read                         864
+  manage_permissions           641
+  manage_container             481
+  output                       460
+  shell_control                453
+  list                         411
+  sort                         364
+  copy                         332
+  version_control              306
+  delete                       269
+  filter                       260
+  transfer                     258
+  transform                    258
+  move                         256
+  network_request              250
+  manage_network               186
+  install                      136
+  manage_process               113
+  security_operation           105
+  manage_service               97
+  modify                       94
+  connect                      84
+  uninstall                    82
+  manage_identity              80
+  manage_package               77
+  manage_database              74
+  manage_cloud                 70
+  create                       48
+  archive                      45
+  configure                    24
+  compare                      7
+
+Risk audit distribution:
+  safe                         11165
+  low                          2651
+  medium                       690
+  high                         715
+  critical                     4
+
+Resolution sources:
+  operation                    12896
+  detail                       1848
+  command_override             267
+  detail_prefix                92
+  package_query                71
+  package_fallback             44
+  unknown_program_execution    7
+
+Mixed-operation audit:
+
+  search_and_execute (602)
+      602 -> search+execute                 [detail]
+
+  modify_or_execute (426)
+      182 -> manage_container               [detail]
+      106 -> version_control                [command_override]
+       72 -> manage_container               [detail_prefix]
+       20 -> version_control                [detail_prefix]
+       19 -> install                        [detail]
+       11 -> execute                        [detail]
+        9 -> manage_package                 [detail]
+        7 -> inspect                        [command_override]
+
+  delete_or_modify (115)
+       58 -> version_control                [detail]
+       30 -> manage_container+delete        [command_override]
+       22 -> version_control+modify         [command_override]
+        3 -> version_control+delete         [command_override]
+        2 -> version_control+inspect        [command_override]
+
+  network_request (367)
+      250 -> network_request                [detail]
+      117 -> transfer                       [detail]
+
+  package_management (323)
+      101 -> install                        [detail]
+       81 -> uninstall                      [detail]
+       71 -> inspect                        [package_query]
+       44 -> manage_package                 [package_fallback]
+       21 -> transfer                       [detail]
+        5 -> manage_package                 [detail]
+
+  inspect_system (103)
+      103 -> inspect                        [detail]
+
+  manage_service (97)
+       97 -> manage_service                 [detail]
+
+  inspect_command (33)
+       33 -> inspect                        [detail]
+
+  checksum (29)
+       29 -> inspect                        [detail]
+
+  remote_access (18)
+       17 -> connect                        [detail]
+        1 -> connect+transfer               [detail]
+
+  infrastructure_operation (12)
+        5 -> inspect                        [detail]
+        3 -> configure                      [detail]
+        2 -> execute                        [detail]
+        1 -> manage_cloud+delete            [command_override]
+        1 -> manage_cloud+modify            [command_override]
+
+Unknown/unresolved IDs:
+  
+
+FINAL STATUS: PASS
+========================================================================

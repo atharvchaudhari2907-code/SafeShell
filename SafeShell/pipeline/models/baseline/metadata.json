@@ -1,0 +1,68 @@
+{
+  "model": "LinearSVC",
+  "feature_extractor": "TfidfVectorizer",
+  "analyzer": "char",
+  "ngram_range": [
+    2,
+    5
+  ],
+  "max_features": 120000,
+  "lowercase": false,
+  "intent": {
+    "type": "multi_label",
+    "labels": [
+      "archive",
+      "compare",
+      "configure",
+      "connect",
+      "copy",
+      "create",
+      "delete",
+      "execute",
+      "extract",
+      "filter",
+      "inspect",
+      "install",
+      "list",
+      "manage_cloud",
+      "manage_container",
+      "manage_database",
+      "manage_identity",
+      "manage_network",
+      "manage_package",
+      "manage_permissions",
+      "manage_process",
+      "manage_service",
+      "modify",
+      "move",
+      "network_request",
+      "output",
+      "read",
+      "search",
+      "security_operation",
+      "shell_control",
+      "sort",
+      "transfer",
+      "transform",
+      "uninstall",
+      "version_control"
+    ],
+    "classifier": "OneVsRest(LinearSVC)"
+  },
+  "risk": {
+    "type": "multiclass",
+    "labels": [
+      "safe",
+      "low",
+      "medium",
+      "high",
+      "critical"
+    ],
+    "classifier": "LinearSVC"
+  },
+  "training_records": 12125,
+  "validation_records": 1534,
+  "iid_test_records": 1558,
+  "grouped_test_records": 1534,
+  "feature_count": 30599
+}

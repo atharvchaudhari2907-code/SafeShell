@@ -1,0 +1,89 @@
+========================================================================
+SafeShell Label Audit V5
+========================================================================
+Label version       : 5.0
+Total records       : 15217
+Training records    : 15217
+Review records      : 0
+Malformed            : 0
+Duplicate IDs        : 0
+Duplicate commands   : 8
+Duplicate conflicts  : 0
+Invalid intents      : 0
+Invalid risks        : 0
+Intent mode          : MULTI-LABEL
+
+Intent distribution:
+  search                       3786
+  inspect                      3095
+  execute                      937
+  extract                      898
+  read                         862
+  manage_container             645
+  manage_permissions           641
+  output                       443
+  shell_control                421
+  list                         411
+  sort                         364
+  version_control              340
+  copy                         331
+  delete                       266
+  filter                       260
+  transfer                     258
+  transform                    258
+  move                         256
+  network_request              250
+  manage_network               186
+  install                      136
+  manage_process               113
+  security_operation           103
+  manage_service               97
+  modify                       94
+  connect                      84
+  uninstall                    82
+  manage_identity              80
+  manage_package               77
+  manage_database              74
+  manage_cloud                 70
+  create                       48
+  archive                      45
+  configure                    24
+  compare                      7
+
+Risk distribution:
+  safe                         11143
+  low                          954
+  medium                       3029
+  high                         89
+  critical                     2
+
+Intent resolution sources:
+  operation                    12864
+  detail                       1848
+  command_override             262
+  operation+shell_structure    91
+  package_query                71
+  package_fallback             44
+  unknown_program_execution    28
+  detail+shell_structure       9
+
+Risk feature reasons:
+  read_only                    5939
+  state_change                 2979
+  destructive_action           1483
+  network_operation            962
+  security_sensitive           887
+  modifies_permissions         668
+  force                        185
+  remote_execution             170
+  privileged                   107
+  remote_write                 103
+  recursive                    66
+  definition_only              12
+  catastrophic_scope           2
+
+Semantic audit flags:
+  none
+
+FINAL STATUS: PASS
+========================================================================

@@ -1,0 +1,94 @@
+========================================================================
+SafeShell Label Audit V3
+========================================================================
+Label version       : 4.0
+Total records       : 15217
+Training records    : 15217
+Review records      : 0
+Malformed            : 0
+Duplicate IDs        : 0
+Invalid intents      : 0
+Invalid risks        : 0
+Intent mode          : MULTI-LABEL
+
+Intent distribution:
+  inspect                      4534
+  search                       4045
+  read                         1345
+  execute                      975
+  extract                      934
+  sort                         932
+  output                       770
+  shell_control                759
+  manage_permissions           642
+  transform                    530
+  manage_container             482
+  filter                       475
+  list                         469
+  copy                         335
+  version_control              307
+  delete                       274
+  transfer                     258
+  move                         256
+  network_request              251
+  manage_network               186
+  install                      136
+  create                       118
+  manage_process               113
+  security_operation           105
+  manage_service               98
+  modify                       94
+  connect                      85
+  uninstall                    82
+  manage_identity              80
+  manage_package               79
+  manage_database              74
+  manage_cloud                 70
+  archive                      45
+  configure                    24
+  compare                      7
+
+Risk distribution:
+  safe                         11369
+  low                          1040
+  medium                       2725
+  high                         81
+  critical                     2
+
+Intent resolution sources:
+  operation                    12549
+  detail                       1220
+  detail+operation             573
+  command_override             265
+  operation+shell_structure    216
+  operation+detail             93
+  detail_prefix                92
+  package_query                68
+  detail+unknown_program_execution 53
+  package_fallback             43
+  operation+unknown_program_execution 11
+  operation+unknown_program_execution+shell_structure 6
+  unknown_program_execution    6
+  detail+operation+shell_structure 5
+  detail+shell_structure       4
+  unknown_program_execution+operation 4
+  package_query+operation      3
+  command_override+operation   2
+  detail+package_fallback      2
+  package_fallback+detail      1
+  unknown_program_execution+operation+shell_structure 1
+
+Risk feature reasons:
+  read_only                    6042
+  modifies_data                2402
+  network_operation            922
+  security_sensitive           813
+  modifies_permissions         671
+  destructive_action           543
+  force                        179
+  privileged                   95
+  recursive                    47
+  definition_only              9
+
+FINAL STATUS: PASS
+========================================================================

@@ -1,0 +1,77 @@
+========================================================================
+SafeShell Label Audit V1
+========================================================================
+Label version       : 1.0
+Total records       : 15225
+Training records    : 15197
+Review records      : 28
+Malformed            : 0
+Duplicate IDs        : 0
+Invalid intents      : 0
+Invalid risks        : 0
+Intent mode          : MULTI-LABEL
+
+Intent distribution:
+  search                       3786
+  inspect                      3093
+  execute                      924
+  extract                      906
+  read                         862
+  manage_container             645
+  manage_permissions           640
+  output                       443
+  list                         411
+  sort                         364
+  version_control              336
+  copy                         331
+  shell_control                321
+  filter                       260
+  transform                    259
+  move                         256
+  network_request              250
+  transfer                     242
+  delete                       221
+  manage_network               183
+  install                      122
+  manage_process               112
+  security_operation           103
+  manage_service               97
+  manage_identity              87
+  uninstall                    81
+  manage_package               77
+  connect                      75
+  manage_database              74
+  manage_cloud                 68
+  modify                       51
+  create                       47
+  archive                      45
+  configure                    21
+  compare                      7
+
+Risk distribution:
+  safe                         12150
+  low                          899
+  medium                       2084
+  high                         59
+  critical                     5
+
+Intent resolution sources:
+  operation                    12852
+  detail                       1974
+  domain                       256
+  package_query                71
+  package_fallback             44
+
+Risk feature reasons:
+  network_operation            912
+  permission_or_identity_change 640
+  force                        574
+  recursive                    345
+  destructive_action           317
+  package_state_change         187
+  privileged                   121
+  service_state_change         53
+  security_operation           6
+
+FINAL STATUS: PASS
+========================================================================

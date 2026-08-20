@@ -1,0 +1,36 @@
+{"line": 869, "command": "echo $((10 + 20))", "error_type": "NotImplementedError", "error": "arithmetic expansion"}
+{"line": 870, "command": "echo $((100 / 5))", "error_type": "NotImplementedError", "error": "arithmetic expansion"}
+{"line": 871, "command": "echo $((COUNT + 1))", "error_type": "NotImplementedError", "error": "arithmetic expansion"}
+{"line": 872, "command": "RESULT=$((VALUE * 2))", "error_type": "NotImplementedError", "error": "arithmetic expansion"}
+{"line": 873, "command": "echo $(( $(wc -l < file.txt) + 1 ))", "error_type": "NotImplementedError", "error": "arithmetic expansion"}
+{"line": 874, "command": "printf \"%d\\n\" $((1024 * 1024))", "error_type": "NotImplementedError", "error": "arithmetic expansion"}
+{"line": 875, "command": "ARRAY=(\"one\" \"two\" \"three\")", "error_type": "ParsingError", "error": "unexpected token '(' (position 6)"}
+{"line": 876, "command": "FILES=(\"a.txt\" \"b.txt\" \"c.txt\")", "error_type": "ParsingError", "error": "unexpected token '(' (position 6)"}
+{"line": 883, "command": "if [[ -f file.txt ]]; then echo \"file\"; fi", "error_type": "ParsingError", "error": "unexpected token '-f' (position 6)"}
+{"line": 884, "command": "if [[ -d project ]]; then echo \"directory\"; fi", "error_type": "ParsingError", "error": "unexpected token '-d' (position 6)"}
+{"line": 885, "command": "if [[ -x script.sh ]]; then ./script.sh; fi", "error_type": "ParsingError", "error": "unexpected token '-x' (position 6)"}
+{"line": 886, "command": "if [[ \"$USER\" == \"root\" ]]; then echo \"root\"; fi", "error_type": "ParsingError", "error": "unexpected token '\"$USER\"' (position 6)"}
+{"line": 887, "command": "if [[ \"$FILE\" == *.txt ]]; then echo \"text\"; fi", "error_type": "ParsingError", "error": "unexpected token '\"$FILE\"' (position 6)"}
+{"line": 888, "command": "if [[ \"$VALUE\" =~ ^[0-9]+$ ]]; then echo \"number\"; fi", "error_type": "ParsingError", "error": "unexpected token '\"$VALUE\"' (position 6)"}
+{"line": 889, "command": "if [[ -n \"$NAME\" ]]; then echo \"set\"; fi", "error_type": "ParsingError", "error": "unexpected token '-n' (position 6)"}
+{"line": 890, "command": "if [[ -z \"$NAME\" ]]; then echo \"empty\"; fi", "error_type": "ParsingError", "error": "unexpected token '-z' (position 6)"}
+{"line": 892, "command": "if [[ \"$ENV\" == \"production\" ]]; then echo \"prod\"; else echo \"non-prod\"; fi", "error_type": "ParsingError", "error": "unexpected token '\"$ENV\"' (position 6)"}
+{"line": 894, "command": "case \"$1\" in start) echo \"Starting\";; stop) echo \"Stopping\";; *) echo \"Unknown\";; esac", "error_type": "NotImplementedError", "error": "type = {pattern}, token = {start}"}
+{"line": 895, "command": "case \"$ENV\" in development) echo \"dev\";; staging) echo \"stage\";; production) echo \"prod\";; esac", "error_type": "NotImplementedError", "error": "type = {pattern}, token = {development}"}
+{"line": 896, "command": "case \"$FILE\" in *.txt) cat \"$FILE\";; *.log) tail \"$FILE\";; *) echo \"unknown\";; esac", "error_type": "NotImplementedError", "error": "type = {pattern}, token = {*.txt}"}
+{"line": 897, "command": "case \"$ANSWER\" in y|Y|yes) echo \"yes\";; n|N|no) echo \"no\";; *) echo \"invalid\";; esac", "error_type": "NotImplementedError", "error": "type = {pattern}, token = {y}"}
+{"line": 921, "command": "while [[ \"$COUNT\" -lt 5 ]]; do echo \"$COUNT\"; ((COUNT++)); done", "error_type": "ParsingError", "error": "unexpected token '\"$COUNT\"' (position 9)"}
+{"line": 923, "command": "until [[ -f ready.flag ]]; do sleep 1; done", "error_type": "ParsingError", "error": "unexpected token '-f' (position 9)"}
+{"line": 924, "command": "for file in *.txt; do [[ -f \"$file\" ]] || continue; echo \"$file\"; done", "error_type": "ParsingError", "error": "unexpected token '-f' (position 25)"}
+{"line": 926, "command": "for i in {1..10}; do [[ \"$i\" -eq 5 ]] && break; echo \"$i\"; done", "error_type": "ParsingError", "error": "unexpected token '\"$i\"' (position 24)"}
+{"line": 1043, "command": "if [[ -n \"$(git status --porcelain)\" ]]; then git status; fi", "error_type": "ParsingError", "error": "unexpected token '-n' (position 6)"}
+{"line": 1049, "command": "if [[ -d .git ]]; then git status --short | tee status.txt; else echo \"Not a repository\"; fi", "error_type": "ParsingError", "error": "unexpected token '-d' (position 6)"}
+{"line": 1069, "command": "if [[ -n \"$(git status --porcelain)\" ]]; then git diff --stat; git status --short; else echo \"Working tree clean\"; fi", "error_type": "ParsingError", "error": "unexpected token '-n' (position 6)"}
+{"line": 1375, "command": "if [[ \"$FILE\" == *.txt ]]; then cat \"$FILE\"; fi", "error_type": "ParsingError", "error": "unexpected token '\"$FILE\"' (position 6)"}
+{"line": 1671, "command": "if [[ -e file.txt ]]; then echo exists; fi", "error_type": "ParsingError", "error": "unexpected token '-e' (position 6)"}
+{"line": 1672, "command": "if [[ -r file.txt ]]; then echo readable; fi", "error_type": "ParsingError", "error": "unexpected token '-r' (position 6)"}
+{"line": 1673, "command": "if [[ -w file.txt ]]; then echo writable; fi", "error_type": "ParsingError", "error": "unexpected token '-w' (position 6)"}
+{"line": 1675, "command": "case \"$1\" in start) ./start.sh;; stop) ./stop.sh;; *) echo unknown;; esac", "error_type": "NotImplementedError", "error": "type = {pattern}, token = {start}"}
+{"line": 1676, "command": "for ((i=0; i<10; i++)); do echo \"$i\"; done", "error_type": "ParsingError", "error": "unexpected token '(' (position 4)"}
+{"line": 1680, "command": "declare -a arr=(one two three)", "error_type": "ParsingError", "error": "unexpected token '(' (position 15)"}
+{"line": 1681, "command": "declare -A assoc=([name]=SafeShell [mode]=dev)", "error_type": "ParsingError", "error": "unexpected token '(' (position 17)"}

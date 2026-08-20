@@ -7,15 +7,30 @@ Collects a raw Bash command from the user, sends it to the Command
 Gateway, and displays the result: the normalized AST (from our
 Bashlex parser) and the real analysis result from
 semantic_fusion.fuse() (risk level, action, explanation, alternative,
-matched rule, semantic matches).
+matched rule, semantic matches). Also runs the command (unless
+BLOCKed) and shows real output.
 
 This module contains NO parsing logic and NO risk/intent logic of its
 own -- it only calls CommandGateway.process() and renders whatever
-comes back. It NEVER executes the user's command.
+comes back.
 """
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+_SAFESHELL_ROOT = Path(__file__).resolve().parents[1]  # .../SafeShell
+_REPO_ROOT = _SAFESHELL_ROOT.parent
+
+for _p in (str(_REPO_ROOT), str(_SAFESHELL_ROOT)):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
+
+import contextlib
+import io
+import shlex
+import subprocess
 from typing import Any, Dict
 
 from textual.app import App, ComposeResult
@@ -24,6 +39,7 @@ from textual.screen import Screen
 from textual.widgets import Button, Footer, Header, Input, Static
 
 from src.gateway.command_gateway import CommandGateway
+
 
 _RISK_COLOR = {
     "low": "green",
@@ -120,8 +136,38 @@ class AnalysisPanel(Vertical):
         self.query_one("#analysis-body", Static).update("No analysis yet.")
 
 
+class OutputPanel(Vertical):
+    """Shows real command output after execution (skipped if BLOCKed)."""
+
+    DEFAULT_CSS = """
+    OutputPanel {
+        border: round $success;
+        padding: 1 2;
+        height: auto;
+    }
+    """
+
+    def compose(self) -> ComposeResult:
+        yield Static("Output", classes="panel-title")
+        yield Static("Not executed.", id="output-body")
+
+    def show_output(self, stdout: str, stderr: str) -> None:
+        body = self.query_one("#output-body", Static)
+        text = stdout.strip() or "(no output)"
+        if stderr.strip():
+            text += f"\n[red]{stderr.strip()}[/red]"
+        body.update(text)
+
+    def show_blocked(self, reason: str) -> None:
+        body = self.query_one("#output-body", Static)
+        body.update(f"[bold red]NOT EXECUTED[/bold red] — {reason}")
+
+    def clear(self) -> None:
+        self.query_one("#output-body", Static).update("Not executed.")
+
+
 class StatusPanel(Static):
-    """Displays READY / PARSING / ANALYZING / ERROR."""
+    """Displays READY / PARSING / ANALYZING / ERROR / GETTING READY."""
 
     DEFAULT_CSS = """
     StatusPanel {
@@ -153,6 +199,7 @@ class SafeShellScreen(Screen):
             yield Button("Analyze", id="analyze-button", variant="primary")
         yield ParsedCommandPanel(id="parsed-panel")
         yield AnalysisPanel(id="analysis-panel")
+        yield OutputPanel(id="output-panel")
         yield StatusPanel(id="status-panel")
         yield Footer()
 
@@ -171,10 +218,12 @@ class SafeShellScreen(Screen):
         status = self.query_one("#status-panel", StatusPanel)
         parsed_panel = self.query_one("#parsed-panel", ParsedCommandPanel)
         analysis_panel = self.query_one("#analysis-panel", AnalysisPanel)
+        output_panel = self.query_one("#output-panel", OutputPanel)
         raw_command = self.query_one("#command-input", Input).value
 
         status.set_status("PARSING")
         analysis_panel.clear()
+        output_panel.clear()
 
         result = self.gateway.process(raw_command)
 
@@ -188,11 +237,24 @@ class SafeShellScreen(Screen):
         status.set_status("ANALYZING")
         analysis_panel.show_analysis(result["analysis"])
 
+        action = result["analysis"].get("action", "BLOCK")
+
+        if action == "BLOCK":
+            output_panel.show_blocked("Command blocked by risk analysis.")
+        else:
+            try:
+                run_result = subprocess.run(
+                    shlex.split(raw_command), capture_output=True, text=True, timeout=10
+                )
+                output_panel.show_output(run_result.stdout, run_result.stderr)
+            except Exception as exc:
+                output_panel.show_blocked(f"Execution error: {exc}")
+
         status.set_status("READY", "Analysis complete")
 
 
 class SafeShellApp(App):
-    """SafeShell Terminal UI. Never executes user-submitted commands."""
+    """SafeShell Terminal UI."""
 
     TITLE = "SafeShell"
 
@@ -201,12 +263,20 @@ class SafeShellApp(App):
     .section-label { color: $text-muted; padding-bottom: 1; }
     #command-input { margin-bottom: 1; }
     .panel-title { text-style: bold; padding-bottom: 1; }
-    #parsed-panel, #analysis-panel { margin: 1 2 0 2; }
+    #parsed-panel, #analysis-panel, #output-panel { margin: 1 2 0 2; }
     #status-panel { margin: 1 2 1 2; }
     """
 
     def on_mount(self) -> None:
         self.push_screen(SafeShellScreen())
+        self.call_after_refresh(self._warm_up_backend)
+
+    def _warm_up_backend(self) -> None:
+        status = self.screen.query_one("#status-panel", StatusPanel)
+        status.set_status("GETTING READY", "loading models, one-time...")
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            CommandGateway().process("echo warmup")
+        status.set_status("READY")
 
 
 def run() -> None:
