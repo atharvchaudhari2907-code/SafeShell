@@ -197,6 +197,7 @@ class SafeShellScreen(Screen):
             yield Static("Enter Linux command:", classes="section-label")
             yield Input(placeholder="e.g. sudo rm -rf /home/project", id="command-input")
             yield Button("Analyze", id="analyze-button", variant="primary")
+            yield Button("Dry Run", id="dryrun-button", variant="warning")
         yield ParsedCommandPanel(id="parsed-panel")
         yield AnalysisPanel(id="analysis-panel")
         yield OutputPanel(id="output-panel")
@@ -208,13 +209,15 @@ class SafeShellScreen(Screen):
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "analyze-button":
-            self._run_analysis()
+            self._run_analysis(dry_run=False)
+        elif event.button.id == "dryrun-button":
+            self._run_analysis(dry_run=True)
 
     def on_input_submitted(self, event: Input.Submitted) -> None:
         if event.input.id == "command-input":
-            self._run_analysis()
+            self._run_analysis(dry_run=False)
 
-    def _run_analysis(self) -> None:
+    def _run_analysis(self, dry_run: bool = False) -> None:
         status = self.query_one("#status-panel", StatusPanel)
         parsed_panel = self.query_one("#parsed-panel", ParsedCommandPanel)
         analysis_panel = self.query_one("#analysis-panel", AnalysisPanel)
@@ -241,6 +244,8 @@ class SafeShellScreen(Screen):
 
         if action == "BLOCK":
             output_panel.show_blocked("Command blocked by risk analysis.")
+        elif dry_run:
+            output_panel.show_output(f"[DRY RUN] Would execute: {raw_command}", "")
         else:
             try:
                 run_result = subprocess.run(

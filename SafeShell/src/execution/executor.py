@@ -24,7 +24,7 @@ from src.trust.user_profile import get_user_profile
 from src.audit.audit_logger import log_command
 
 
-def execute_command(raw_command: str, role: str, user_id: str = "default") -> None:
+def execute_command(raw_command: str, role: str, user_id: str = "default", dry_run: bool = False) -> None:
     gateway = CommandGateway()
     profile = get_user_profile(role)
     print(f"User: {profile['name']}")
@@ -50,13 +50,20 @@ def execute_command(raw_command: str, role: str, user_id: str = "default") -> No
         record_outcome(user_id, parsed_command, "BLOCKED", analysis.get("final_risk","?"))
         return
 
-    if final_action == "CONFIRM" and not decision["skip_confirmation"]:
+    if final_action == "CONFIRM" and not decision["skip_confirmation"] and not dry_run:
         approval = input("Proceed anyway? (yes/no): ")
         if approval.strip().lower() != "yes":
             print("Rejected by user.")
             log_command(raw_command, role, profile["risk_level"], "REJECTED", "User declined")
             record_outcome(user_id, parsed_command, "REJECTED", analysis.get("final_risk","?"))
             return
+
+    if dry_run:
+        print(f"[DRY RUN] Would execute: {raw_command}")
+        print(f"[DRY RUN] Decision: {final_action} -- command NOT actually run")
+        log_command(raw_command, role, profile["risk_level"], "DRY_RUN", decision["reason"])
+        record_outcome(user_id, parsed_command, "DRY_RUN", analysis.get("final_risk","?"))
+        return
 
     _run(raw_command, role, profile["risk_level"], user_id, parsed_command, analysis)
 
@@ -78,4 +85,5 @@ if __name__ == "__main__":
     role_input = input("Enter user role (normal/developer/admin): ")
     user_id_input = input("Enter user id: ")
     command_input = input("Enter command: ")
-    execute_command(command_input, role_input, user_id_input)
+    dry_run_input = input("Dry run? (yes/no): ").strip().lower() == "yes"
+    execute_command(command_input, role_input, user_id_input, dry_run=dry_run_input)
