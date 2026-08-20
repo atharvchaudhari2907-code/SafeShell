@@ -12,7 +12,7 @@ from scipy.sparse import hstack
 _SAFESHELL_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_SAFESHELL_ROOT / "pipeline" / "scripts"))
 sys.path.insert(0, str(_SAFESHELL_ROOT))
-from enrich import enrich_record
+from enrich import enrich_record # type: ignore[import-not-found]
 from src.explanation.explainer import generate_explanation
 
 MODEL_DIR = _SAFESHELL_ROOT / "pipeline" / "models" / "svm_enriched"
@@ -404,7 +404,7 @@ def predict(command):
 
     # Reuse the SAME flattening implementation
     # from train_svm_enriched.py.
-    from train_svm_enriched import (
+    from train_svm_enriched import ( # type: ignore[import-not-found]
         build_structured_features,
     )
 
